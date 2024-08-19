@@ -1,12 +1,16 @@
 # NativeUI
 
-NativeUI is a front-end component library built entirely with native HTML, CSS, and JavaScript. It focuses on providing a solid foundation of reusable components without relying on any third-party frameworks or libraries. This library is ideal for projects that prioritize simplicity, performance, and a minimalistic approach.
+NativeUI is a lightweight front-end component library that doesn't require any third-party libraries. It leverages modern HTML, CSS, and JavaScript to provide a solid foundation for simple web projects without the overhead and complexity of larger frameworks.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![GitHub issues](https://img.shields.io/github/issues/chrlzs/NativeUI.svg)](https://github.com/chrlzs/NativeUI/issues)
 [![GitHub forks](https://img.shields.io/github/forks/chrlzs/NativeUI.svg)](https://github.com/chrlzs/NativeUI/network)
 [![GitHub stars](https://img.shields.io/github/stars/chrlzs/NativeUI.svg)](https://github.com/chrlzs/NativeUI/stargazers)
 [![GitHub contributors](https://img.shields.io/github/contributors/chrlzs/NativeUI.svg)](https://github.com/chrlzs/NativeUI/graphs/contributors)
+
+## Project Description
+
+The aim of this project is to establish a foundation for a simple web project that is free from any back-end dependencies and does not rely on JavaScript frameworks and libraries like React, Angular, or Axios, nor CSS frameworks and preprocessors like Tailwind and Sass. Many of these frameworks and libraries were created before native solutions were available. Today, modern HTML, CSS, and JavaScript provide most of this functionality natively without the overhead of third-party dependencies. While this boilerplate may not be suitable for large, complex projects, it serves as a solid foundation for simpler projects, offering a more straightforward and efficient approach without the complexity and learning curve associated with larger frameworks.
 
 ## Table of Contents
 
@@ -48,10 +52,14 @@ NativeUI/
 │   │   ├── modal.css
 │   │   ├── modal.html
 │   │   └── modal.js
-│   └── tooltip/
-│       ├── tooltip.css
-│       ├── tooltip.html
-│       └── tooltip.js
+│   ├── tooltip/
+│   │   ├── tooltip.css
+│   │   ├── tooltip.html
+│   │   └── tooltip.js
+│   └── accordion/
+│       ├── accordion.css
+│       ├── accordion.html
+│       └── accordion.js
 ├── dist/
 │   └── (compiled files, if any)
 ├── docs/
@@ -72,7 +80,7 @@ NativeUI/
 
 ### Button
 
-A simple, customizable button component.
+Standard button implementation using native HTML and CSS.
 
 - **HTML**: `components/button/button.html`
 - **CSS**: `components/button/button.css`
@@ -80,7 +88,7 @@ A simple, customizable button component.
 
 ### Modal
 
-A flexible modal dialog component.
+A modal dialog that can be triggered programmatically or via user interaction.
 
 - **HTML**: `components/modal/modal.html`
 - **CSS**: `components/modal/modal.css`
@@ -88,11 +96,19 @@ A flexible modal dialog component.
 
 ### Tooltip
 
-A lightweight tooltip component.
+Tooltip implementation that can be shown/hidden programmatically.
 
 - **HTML**: `components/tooltip/tooltip.html`
 - **CSS**: `components/tooltip/tooltip.css`
 - **JavaScript**: `components/tooltip/tooltip.js`
+
+### Accordion
+
+An accordion component that can expand and collapse sections of content.
+
+- **HTML**: `components/accordion/accordion.html`
+- **CSS**: `components/accordion/accordion.css`
+- **JavaScript**: `components/accordion/accordion.js`
 
 ## Running the Project
 
