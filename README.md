@@ -111,11 +111,19 @@ An accordion component that can expand and collapse sections of content.
 - **JavaScript**: `components/accordion/accordion.js`
 
 ## More Components Coming Soon
+- Carousel/Slider
+- Alert/Notification
+- Progress Bar
+- Breadcrumbs
+- Spinner/Loader
+- Pagination
+- Toolbars
 - Forms
 - Tabs
 - Dropdown Menus
 - Cards
 - Navigation Bars
+- Responsive Grid Layout
 
 ## Running the Project
 
