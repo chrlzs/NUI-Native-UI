@@ -67,13 +67,15 @@ NativeUI/
 ├── docs/
 │   └── (documentation for components)
 ├── index.html
+├── style-guide.html
 ├── README.md
 └── LICENSE
 ```
 
 - **components/**: Contains individual component folders, each with its own HTML, CSS, and JS files.
 - **docs/**: Contains documentation and usage examples for each component.
-- **index.html**: A demo page to showcase the components in action.
+- **index.html**: Links to demo page.
+- **style-guide.html**: A demo page to showcase the components in action.
 - **README.md**: This file.
 - **LICENSE**: The project license.
 
