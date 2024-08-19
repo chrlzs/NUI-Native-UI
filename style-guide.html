@@ -10,7 +10,9 @@
     <link rel="stylesheet" href="/components/button/button.css">
     <link rel="stylesheet" href="/components/tooltip/tooltip.css">
     <link rel="stylesheet" href="/components/carousel/carousel.css">
-    </body>
+    <link rel="stylesheet" href="/components/accordion/accordion.css">
+</body>
+
 </head>
 
 <body>
@@ -51,6 +53,7 @@
             </div>
         </section>
 
+
         <!-- Carousel/Slider Component -->
         <section id="carousel">
             <h2>Carousel/Slider</h2>
@@ -71,12 +74,32 @@
                 <button class="carousel-control prev" id="prevSlide">&#10094;</button>
                 <button class="carousel-control next" id="nextSlide">&#10095;</button>
         </section>
-
-
-        <!-- Add more components here -->
-
-    </main>
-    <script src="/components/carousel/carousel.js"></script>
+    
+        <section id="accordion">
+          <h2>Accordion</h2>
+          <p>An accordion component that can expand and collapse sections of content.</p>
+          <div class="accordion-item">
+            <button class="accordion-header">Section 1</button>
+            <div class="accordion-content">
+              <p>This is the content for section 1.</p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-header">Section 2</button>
+            <div class="accordion-content">
+               <p>This is the content for section 2.</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-header">Section 3</button>
+          <div class="accordion-content">
+              <p>This is the content for section 3.</p>
+          </div>
+      </div>
+</section>
+</main>
+     <script src="/components/carousel/carousel.js"></script>
+    <script src="/components/accordion/accordion.js"></script>
     <script src="/components/modal/modal.js"></script>
     <script src="/components/tooltip/tooltip.js"></script>
 </body>
