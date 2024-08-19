@@ -72,7 +72,6 @@ NativeUI/
 ```
 
 - **components/**: Contains individual component folders, each with its own HTML, CSS, and JS files.
-- **dist/**: Intended for compiled or minified files.
 - **docs/**: Contains documentation and usage examples for each component.
 - **index.html**: A demo page to showcase the components in action.
 - **README.md**: This file.
