@@ -56,12 +56,14 @@ NativeUI/
 │   │   ├── accordion.css
 │   │   ├── accordion.html
 │   │   └── accordion.js
-│   └── carousel/
-│       ├── carousel.css
-│       ├── carousel.html
-│       └── carousel.js
-├── dist/
-│   └── (compiled files, if any)
+│   ├── carousel/
+│   │   ├── carousel.css
+│   │   ├── carousel.html
+│   │   └── carousel.js
+│   └── alert/
+│       ├── alert.css
+│       ├── alert.html
+│       └── alert.js
 ├── docs/
 │   └── (documentation for components)
 ├── index.html
@@ -120,9 +122,19 @@ A responsive carousel/slider component that cycles through images or content.
 
 The Carousel component includes controls for navigating between slides and is responsive, ensuring that images are properly displayed across different screen sizes.
 
+### Alert/Notification
+
+A customizable alert/notification component that can be closed by the user or triggered programmatically.
+
+- **HTML**: `components/alert/alert.html`
+- **CSS**: `components/alert/alert.css`
+- **JavaScript**: `components/alert/alert.js`
+
+The Alert/Notification component is flexible and allows for dynamic messages to be displayed to users.
+
 ## More Components Coming Soon
 - ~~Carousel/Slider~~
-- Alert/Notification
+- ~~Alert/Notification~~
 - Progress Bar
 - Breadcrumbs
 - Spinner/Loader

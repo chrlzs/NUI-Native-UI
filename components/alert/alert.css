@@ -1,0 +1,27 @@
+.alert {
+    padding: 15px;
+    background-color: #f44336; /* Red */
+    color: white;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .alert-text {
+    flex-grow: 1;
+  }
+  
+  .close-alert {
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 18px;
+  }
+  
+  .close-alert:hover {
+    color: black;
+  }
+  

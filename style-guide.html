@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="/components/tooltip/tooltip.css">
     <link rel="stylesheet" href="/components/carousel/carousel.css">
     <link rel="stylesheet" href="/components/accordion/accordion.css">
+    <link rel="stylesheet" href="/components/alert/alert.css">
     </body>
 
 </head>
@@ -95,11 +96,23 @@
                 <button class="carousel-control prev" id="prevSlide">&#10094;</button>
                 <button class="carousel-control next" id="nextSlide">&#10095;</button>
         </section>
+         <!-- Alert Component -->
+         <section id="alerts">
+            <h2>Alerts</h2>
+            <p>A standard alert that can be closed by the user.</p>
+            <div class="alert" id="alertBox">
+                <span class="alert-text" id="alertText">This is an alert message!</span>
+                <span class="close-alert" id="closeAlertButton">&times;</span>
+            </div>
+            <button onclick="showAlert('This is a dynamic alert message!')" class="native-button">Show Alert</button>
+        </section>
     </main>
-    <script src="/components/carousel/carousel.js"></script>
-    <script src="/components/accordion/accordion.js"></script>
+    
     <script src="/components/modal/modal.js"></script>
     <script src="/components/tooltip/tooltip.js"></script>
+    <script src="/components/accordion/accordion.js"></script>
+    <script src="/components/carousel/carousel.js"></script>
+    <script src="/components/alert/alert.js"></script>
 </body>
 
 </html>
