@@ -56,10 +56,14 @@ NativeUI/
 │   │   ├── tooltip.css
 │   │   ├── tooltip.html
 │   │   └── tooltip.js
-│   └── accordion/
-│       ├── accordion.css
-│       ├── accordion.html
-│       └── accordion.js
+│   ├── accordion/
+│   │   ├── accordion.css
+│   │   ├── accordion.html
+│   │   └── accordion.js
+│   └── carousel/
+│       ├── carousel.css
+│       ├── carousel.html
+│       └── carousel.js
 ├── dist/
 │   └── (compiled files, if any)
 ├── docs/
