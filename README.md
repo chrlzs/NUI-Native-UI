@@ -110,8 +110,18 @@ An accordion component that can expand and collapse sections of content.
 - **CSS**: `components/accordion/accordion.css`
 - **JavaScript**: `components/accordion/accordion.js`
 
+### Carousel/Slider
+
+A responsive carousel/slider component that cycles through images or content.
+
+- **HTML**: `components/carousel/carousel.html`
+- **CSS**: `components/carousel/carousel.css`
+- **JavaScript**: `components/carousel/carousel.js`
+
+The Carousel component includes controls for navigating between slides and is responsive, ensuring that images are properly displayed across different screen sizes.
+
 ## More Components Coming Soon
-- Carousel/Slider
+- ~~Carousel/Slider~~
 - Alert/Notification
 - Progress Bar
 - Breadcrumbs
