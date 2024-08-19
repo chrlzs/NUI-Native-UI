@@ -110,6 +110,13 @@ An accordion component that can expand and collapse sections of content.
 - **CSS**: `components/accordion/accordion.css`
 - **JavaScript**: `components/accordion/accordion.js`
 
+## More Components Coming Soon
+- Forms
+- Tabs
+- Dropdown Menus
+- Cards
+- Navigation Bars
+
 ## Running the Project
 
 To view the components in action, you can run a local web server. Here are a few methods to do that:
