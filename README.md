@@ -60,10 +60,14 @@ NativeUI/
 │   │   ├── carousel.css
 │   │   ├── carousel.html
 │   │   └── carousel.js
-│   └── alert/
-│       ├── alert.css
-│       ├── alert.html
-│       └── alert.js
+│   ├── alert/
+│   │   ├── alert.css
+│   │   ├── alert.html
+│   │   └── alert.js
+│   └── progress-bar/
+│       ├── progress-bar.css
+│       ├── progress-bar.html
+│       └── progress-bar.js
 ├── docs/
 │   └── (documentation for components)
 ├── index.html
@@ -133,10 +137,20 @@ A customizable alert/notification component that can be closed by the user or tr
 
 The Alert/Notification component is flexible and allows for dynamic messages to be displayed to users.
 
+### Progress Bar
+
+A customizable progress bar component that can be updated programmatically.
+
+- **HTML**: `components/progress-bar/progress-bar.html`
+- **CSS**: `components/progress-bar/progress-bar.css`
+- **JavaScript**: `components/progress-bar/progress-bar.js`
+
+The Progress Bar component allows for dynamic updates to visually represent progress in tasks.
+
 ## More Components Coming Soon
 - ~~Carousel/Slider~~
 - ~~Alert/Notification~~
-- Progress Bar
+- ~~Progress Bar~~
 - Breadcrumbs
 - Spinner/Loader
 - Pagination
