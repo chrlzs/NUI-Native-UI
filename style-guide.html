@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="/components/carousel/carousel.css">
     <link rel="stylesheet" href="/components/accordion/accordion.css">
     <link rel="stylesheet" href="/components/alert/alert.css">
+    <link rel="stylesheet" href="/components/progress-bar/progress-bar.css">
     </body>
 
 </head>
@@ -53,7 +54,7 @@
                 <div class="tooltip" id="tooltipText">This is a tooltip</div>
             </div>
         </section>
-
+        <!-- Accordion Component -->
         <section id="accordion">
             <h2>Accordion</h2>
             <p>An accordion component that can expand and collapse sections of content.</p>
@@ -106,6 +107,15 @@
             </div>
             <button onclick="showAlert('This is a dynamic alert message!')" class="native-button">Show Alert</button>
         </section>
+        <!-- Progress Bar Component -->
+        <section id="progress-bars">
+            <h2>Progress Bars</h2>
+            <p>A standard progress bar that can be updated programmatically.</p>
+            <div class="progress-bar-container">
+                <div class="progress-bar" id="progressBar"></div>
+            </div>
+            <button onclick="updateProgressBar(70)" class="native-button">Set Progress to 70%</button>
+        </section>
     </main>
     
     <script src="/components/modal/modal.js"></script>
@@ -113,6 +123,7 @@
     <script src="/components/accordion/accordion.js"></script>
     <script src="/components/carousel/carousel.js"></script>
     <script src="/components/alert/alert.js"></script>
+    <script src="/components/progress-bar/progress-bar.js"></script>
 </body>
 
 </html>
