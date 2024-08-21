@@ -150,11 +150,19 @@ A customizable progress bar component that can be updated programmatically.
 
 The Progress Bar component allows for dynamic updates to visually represent progress in tasks.
 
+### Breadcrumbs
+
+A breadcrumb navigation component to help users understand and navigate your website's hierarchy.
+
+- **HTML**: `components/breadcrumbs/breadcrumbs.html`
+- **CSS**: `components/breadcrumbs/breadcrumbs.css`
+- **JavaScript**: No JavaScript required for basic implementation.
+
 ## More Components Coming Soon
 - ~~Carousel/Slider~~
 - ~~Alert/Notification~~
 - ~~Progress Bar~~
-- Breadcrumbs
+- ~~Breadcrumbs~~
 - Spinner/Loader
 - Pagination
 - Toolbars
