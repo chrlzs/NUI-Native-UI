@@ -1,3 +1,6 @@
+@import url('/styles/global.css');
+
+
 /* accordion.css */
 .accordion-item {
     margin-bottom: 10px;
@@ -12,7 +15,7 @@
     font-size: 1rem;
     font-weight: bold;
     text-align: left;
-    background-color: #f7f7f7;
+    background-color: var(--light-color);
     border: none;
     outline: none;
     cursor: pointer;
@@ -20,12 +23,12 @@
 }
 
 .accordion-header:hover {
-    background-color: #e2e2e2;
+    background-color: var(--light-color);
 }
 
 .accordion-content {
     display: none;
     padding: 10px;
-    background-color: #fff;
+    background-color: var(--light-color);
     border-top: 1px solid #ddd;
 }

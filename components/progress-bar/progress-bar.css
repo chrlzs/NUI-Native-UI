@@ -1,6 +1,8 @@
+@import url('/styles/global.css');
+
 .progress-bar-container {
     width: 100%;
-    background-color: #f3f3f3;
+    background-color: var(light-color);
     border-radius: 25px;
     overflow: hidden;
     height: 20px;
@@ -10,7 +12,7 @@
 .progress-bar {
     width: 0;
     height: 100%;
-    background-color: #4caf50; /* Green */
+    background-color: var(--success-color)
     border-radius: 25px;
     transition: width 0.4s ease;
 }

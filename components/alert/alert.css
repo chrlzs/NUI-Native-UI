@@ -1,7 +1,10 @@
+@import url('/styles/global.css');
+
+
 .alert {
     padding: 15px;
-    background-color: #f44336; /* Red */
-    color: white;
+    background-color: var(--danger-color);
+    color: var(--light-color);
     margin-bottom: 15px;
     border-radius: 5px;
     position: relative;

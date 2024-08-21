@@ -1,5 +1,17 @@
-:root {
-    --btn-bg: #007BFF;
-    --btn-bg-hover: #0056b3;
-    --btn-color: #FFF;
+@import url('/styles/global.css');
+
+
+.native-button {
+    font-family: var(--font-family);
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    border: none;
+    border-radius: var(--border-radius);
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color var(--transition-speed);
+    
+    &:hover {
+        background-color: var(--secondary-color);
+    }
 }
