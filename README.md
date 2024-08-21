@@ -64,10 +64,13 @@ NativeUI/
 │   │   ├── alert.css
 │   │   ├── alert.html
 │   │   └── alert.js
-│   └── progress-bar/
-│       ├── progress-bar.css
-│       ├── progress-bar.html
-│       └── progress-bar.js
+│   ├── progress-bar/
+│   │   ├── progress-bar.css
+│   │   ├── progress-bar.html
+│   │   └── progress-bar.js
+│   └── breadcrumbs/
+│       ├── breadcrumbs.css
+│       └── breadcrumbs.html
 ├── docs/
 │   └── (documentation for components)
 ├── index.html
