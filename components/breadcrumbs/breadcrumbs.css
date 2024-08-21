@@ -1,3 +1,6 @@
+@import url('/styles/global.css');
+
+
 .breadcrumbs {
     display: flex;
     align-items: center;

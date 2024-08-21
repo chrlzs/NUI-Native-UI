@@ -1,3 +1,6 @@
+@import url('/styles/global.css');
+
+
 /* Tooltip container */
 .tooltip-container {
     position: relative;
@@ -8,8 +11,8 @@
 .tooltip {
     visibility: hidden;
     width: 120px;
-    background-color: #333;
-    color: #fff;
+    background-color: var(--dark-color);
+    color: var(--light-color);
     text-align: center;
     border-radius: 5px;
     padding: 0.5rem;
@@ -31,7 +34,7 @@
     transform: translateX(-50%);
     border-width: 5px;
     border-style: solid;
-    border-color: #333 transparent transparent transparent;
+    border-color: var(--primary-color) transparent transparent transparent;
 }
 
 /* Show the tooltip when hovering */
