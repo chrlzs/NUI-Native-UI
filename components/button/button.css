@@ -1,7 +1,7 @@
 @import url('/styles/global.css');
 
 
-.native-button {
+.button {
     font-family: var(--font-family);
     background-color: var(--primary-color);
     color: var(--light-color);

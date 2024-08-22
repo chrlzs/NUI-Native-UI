@@ -32,14 +32,14 @@
         <section id="buttons">
             <h2>Buttons</h2>
             <p>Standard button implementation using the NativeUI button component.</p>
-            <button class="native-button">Primary Button</button>
+            <x-button>Click Me</x-button>
         </section>
 
         <!-- Modal Component -->
         <section id="modals">
             <h2>Modals</h2>
             <p>A modal dialog that can be triggered programmatically or via user interaction.</p>
-            <button class="native-button" id="openModalButton">Open Modal</button>
+            <button class="button" id="openModalButton">Open Modal</button>
             <div class="modal" id="exampleModal">
                 <div class="modal-content">
                     <span class="close" id="closeModalButton">&times;</span>
@@ -53,7 +53,7 @@
             <h2>Tooltips</h2>
             <p>Tooltip implementation that can be shown/hidden programmatically.</p>
             <div class="tooltip-container">
-                <button class="native-button" id="tooltipButton">Hover over me</button>
+                <button class="button" id="tooltipButton">Hover over me</button>
                 <div class="tooltip" id="tooltipText">This is a tooltip</div>
             </div>
         </section>
@@ -108,7 +108,7 @@
                 <span class="alert-text" id="alertText">This is an alert message!</span>
                 <span class="close-alert" id="closeAlertButton">&times;</span>
             </div>
-            <button onclick="showAlert('This is a dynamic alert message!')" class="native-button">Show Alert</button>
+            <button onclick="showAlert('This is a dynamic alert message!')" class="button">Show Alert</button>
         </section>
         <!-- Progress Bar Component -->
         <section id="progress-bars">
@@ -117,7 +117,7 @@
             <div class="progress-bar-container">
                 <div class="progress-bar" id="progressBar"></div>
             </div>
-            <button onclick="updateProgressBar(70)" class="native-button">Set Progress to 70%</button>
+            <button onclick="updateProgressBar(70)" class="button">Set Progress to 70%</button>
         </section>
         <!-- Breadcrumbs Component -->
         <section id="breadcrumbs">
@@ -140,7 +140,7 @@
         </section>
         
     </main>
-
+    <script src="/components/button/button.js"></script>
     <script src="/components/modal/modal.js"></script>
     <script src="/components/tooltip/tooltip.js"></script>
     <script src="/components/accordion/accordion.js"></script>
