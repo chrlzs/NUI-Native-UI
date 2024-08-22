@@ -16,4 +16,8 @@
     --transition-speed: 0.3s;
     --transition-timing-function: ease;
     --font-size: 1em;
+    --spinner-size: 40px;
+    --spinner-border: 4px;
+    --spinner-color: rgba(0, 123, 255, 1);
+    --spinner-speed: 1s;
 }
