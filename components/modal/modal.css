@@ -44,7 +44,7 @@
 }
 
 /* The Native Button (shared style with other buttons) */
-.native-button {
+.button {
     padding: 0.5rem 1rem;
     font-size: 1rem;
     color: var(--dark-color);
@@ -55,6 +55,6 @@
     transition: background-color var(--transition-speed) ease;
 }
 
-.native-button:hover {
+.button:hover {
     background-color: var(--secondary-color);
 }
