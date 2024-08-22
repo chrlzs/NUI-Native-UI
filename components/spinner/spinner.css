@@ -1,0 +1,15 @@
+@import url('/styles/global.css');
+
+.spinner {
+    width: var(--spinner-size);
+    height: var(--spinner-size);
+    border: var(--spinner-border) solid #f3f3f3;
+    border-top: var(--spinner-border) solid var(--spinner-color);
+    border-radius: 50%;
+    animation: spin var(--spinner-speed) linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

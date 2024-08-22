@@ -68,9 +68,15 @@ NativeUI/
 │   │   ├── progress-bar.css
 │   │   ├── progress-bar.html
 │   │   └── progress-bar.js
-│   └── breadcrumbs/
-│       ├── breadcrumbs.css
-│       └── breadcrumbs.html
+│   ├── breadcrumbs/
+│   │   ├── breadcrumbs.css
+│   │   ├── breadcrumbs.html
+│   └── spinner/
+│       ├── spinner.css
+│       ├── spinner.css
+│       └── spinner.html
+├── styles/
+│   ├── global.css
 ├── docs/
 │   └── (documentation for components)
 ├── index.html
@@ -158,12 +164,20 @@ A breadcrumb navigation component to help users understand and navigate your web
 - **CSS**: `components/breadcrumbs/breadcrumbs.css`
 - **JavaScript**: No JavaScript required for basic implementation.
 
+### Spinner/Loader
+
+A customizable spinner/loader component that can be styled using global CSS variables.
+
+- **HTML**: `components/spinner/spinner.html`
+- **CSS**: `components/spinner/spinner.css`
+- **JavaScript**: `components/spinner/spinner.js`
+
 ## More Components Coming Soon
 - ~~Carousel/Slider~~
 - ~~Alert/Notification~~
 - ~~Progress Bar~~
 - ~~Breadcrumbs~~
-- Spinner/Loader
+- ~~Spinner/Loader~~
 - Pagination
 - Toolbars
 - Forms
