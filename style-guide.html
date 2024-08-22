@@ -39,7 +39,7 @@
         <section id="modals">
             <h2>Modals</h2>
             <p>A modal dialog that can be triggered programmatically or via user interaction.</p>
-            <button class="button" id="openModalButton">Open Modal</button>
+            <x-button  id="openModalButton">Open Modal</x-button>
             <div class="modal" id="exampleModal">
                 <div class="modal-content">
                     <span class="close" id="closeModalButton">&times;</span>
@@ -53,7 +53,7 @@
             <h2>Tooltips</h2>
             <p>Tooltip implementation that can be shown/hidden programmatically.</p>
             <div class="tooltip-container">
-                <button class="button" id="tooltipButton">Hover over me</button>
+                <x-button  id="tooltipButton">Hover over me</x-button>
                 <div class="tooltip" id="tooltipText">This is a tooltip</div>
             </div>
         </section>
@@ -108,7 +108,7 @@
                 <span class="alert-text" id="alertText">This is an alert message!</span>
                 <span class="close-alert" id="closeAlertButton">&times;</span>
             </div>
-            <button onclick="showAlert('This is a dynamic alert message!')" class="button">Show Alert</button>
+            <x-button  onclick="showAlert('This is a dynamic alert message!')">Show Alert</x-button>
         </section>
         <!-- Progress Bar Component -->
         <section id="progress-bars">
@@ -117,7 +117,7 @@
             <div class="progress-bar-container">
                 <div class="progress-bar" id="progressBar"></div>
             </div>
-            <button onclick="updateProgressBar(70)" class="button">Set Progress to 70%</button>
+            <x-button  onclick="updateProgressBar(70)">Set Progress to 70%</x-button>
         </section>
         <!-- Breadcrumbs Component -->
         <section id="breadcrumbs">
