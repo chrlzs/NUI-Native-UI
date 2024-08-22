@@ -34,7 +34,7 @@
     transform: translateX(-50%);
     border-width: 5px;
     border-style: solid;
-    border-color: var(--primary-color) transparent transparent transparent;
+    border-color: var(--dark-color) transparent transparent transparent;
 }
 
 /* Show the tooltip when hovering */
