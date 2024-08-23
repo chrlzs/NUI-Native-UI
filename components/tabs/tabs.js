@@ -1,29 +1,70 @@
 class XTabs extends HTMLElement {
     constructor() {
         super();
-        this.attachShadow({ mode: 'open' });
-        this.shadowRoot.innerHTML = `
+        const shadow = this.attachShadow({ mode: 'open' });
+
+        shadow.innerHTML = `
             <style>
-                ${this.getStyles()}
+                /* Default styling for tabs */
+                :host {
+                    display: block;
+                    font-family: var(--font-family, Arial, sans-serif);
+                }
+
+                .tabs {
+                    display: flex;
+                    border-bottom: 2px solid var(--tab-border-color, #ccc);
+                }
+
+                .tab-button {
+                    padding: 10px 20px;
+                    cursor: pointer;
+                    background-color: var(--tab-bg-color, #f9f9f9);
+                    border: none;
+                    outline: none;
+                    transition: background-color 0.3s ease;
+                }
+
+                .tab-button.active {
+                    background-color: var(--tab-active-bg-color, #fff);
+                    border-bottom: 2px solid var(--tab-active-border-color, #007BFF);
+                }
+
+                .tab-button:hover:not(.active) {
+                    background-color: var(--tab-hover-bg-color, #eee);
+                }
+
+                .tab-content {
+                    display: none;
+                    padding: 20px;
+                    border: 1px solid var(--content-border-color, #ddd);
+                    border-top: none;
+                }
+
+                .tab-content.active {
+                    display: block;
+                }
             </style>
             <div class="tabs">
-                <div class="tab-buttons">
-                    <slot name="tab-buttons"></slot>
-                </div>
-                <div class="tab-content">
-                    <slot name="tab-content"></slot>
-                </div>
+                <slot name="tab-buttons"></slot>
+            </div>
+            <div class="tab-contents">
+                <slot name="tab-contents"></slot>
             </div>
         `;
-    }
 
-    connectedCallback() {
-        this.tabButtons = this.shadowRoot.querySelectorAll('.tab-button');
-        this.tabContents = this.shadowRoot.querySelectorAll('.tab-content');
+        this.tabButtons = this.querySelectorAll('[data-tab]');
+        this.tabContents = this.querySelectorAll('.tab-content');
 
         console.log(`Found ${this.tabButtons.length} tab buttons.`); // Debug log
+        console.log(`Found ${this.tabContents.length} tab contents.`); // Debug log
 
         this.addEventListeners();
+
+        // Activate the first tab and content on load
+        if (this.tabButtons.length > 0) {
+            this.activateTab(this.tabButtons[0].dataset.tab);
+        }
     }
 
     addEventListeners() {
@@ -46,18 +87,16 @@ class XTabs extends HTMLElement {
         console.log(`Activating tab: ${tabId}`);
 
         this.tabButtons.forEach(button => {
-            button.classList.toggle('active', button.dataset.tab === tabId);
+            const isActive = button.dataset.tab === tabId;
+            console.log(`Setting button ${button.dataset.tab} active: ${isActive}`);
+            button.classList.toggle('active', isActive);
         });
 
         this.tabContents.forEach(content => {
-            content.classList.toggle('active', content.id === tabId);
+            const isActive = content.id === tabId;
+            console.log(`Setting content ${content.id} active: ${isActive}`);
+            content.classList.toggle('active', isActive);
         });
-    }
-
-    getStyles() {
-        return `
-            /* your CSS here */
-        `;
     }
 }
 
