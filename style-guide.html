@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="/components/breadcrumbs/breadcrumbs.css">
     <link rel="stylesheet" href="/components/spinner/spinner.css">
     <link rel="stylesheet" href="/components/pagination/pagination.css">
+    <link rel="stylesheet" href="/components/toolbar/toolbar.css">
     </body>
 
 </head>
@@ -145,6 +146,16 @@
             <p>A pagination component to navigate between pages of content.</p>
             <x-pagination></x-pagination>
         </section>
+         <!-- Toolbar Content -->
+        <section id="toolbar">
+            <h2>Toolbar</h2>
+            <p>A customizable toolbar for common actions.</p>
+            <x-toolbar>
+                <button class="toolbar-button" data-action="save">Save</button>
+                <button class="toolbar-button" data-action="edit">Edit</button>
+                <button class="toolbar-button" data-action="delete">Delete</button>
+            </x-toolbar>
+        </section>
     </main>
     <script src="/components/button/button.js"></script>
     <script src="/components/modal/modal.js"></script>
@@ -155,6 +166,7 @@
     <script src="/components/progress-bar/progress-bar.js"></script>
     <script src="/components/spinner/spinner.js"></script>
     <script src="/components/pagination/pagination.js"></script>
+    <script src="/components/toolbar/toolbar.js"></script>
 </body>
 
 </html>

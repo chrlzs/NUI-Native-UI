@@ -180,6 +180,14 @@ A pagination component that allows users to navigate through multiple pages.
 - **CSS**: `components/pagination/pagination.css`
 - **JavaScript**: `components/pagination/pagination.js`
 
+### Toolbar
+
+A customizable toolbar component with buttons for common actions.
+
+- **HTML**: `components/toolbar/toolbar.html`
+- **CSS**: `components/toolbar/toolbar.css`
+- **JavaScript**: `components/toolbar/toolbar.js`
+
 ## More Components Coming Soon
 - ~~Carousel/Slider~~
 - ~~Alert/Notification~~
@@ -187,7 +195,7 @@ A pagination component that allows users to navigate through multiple pages.
 - ~~Breadcrumbs~~
 - ~~Spinner/Loader~~
 - ~~Pagination~~
-- Toolbars
+- ~~Toolbars~~
 - Forms
 - Tabs
 - Dropdown Menus
