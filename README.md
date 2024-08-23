@@ -71,14 +71,18 @@ NativeUI/
 │   ├── breadcrumbs/
 │   │   ├── breadcrumbs.css
 │   │   ├── breadcrumbs.html
-│   └── spinner/
-│       ├── spinner.css
-│       ├── spinner.css
-│       └── spinner.html
-│   └── toolbar/
-│       ├── toolbar.css
-│       ├── toolbar.css
-│       └── toolbar.html
+│   ├── spinner/
+│   │   ├── spinner.css
+│   │   ├── spinner.html
+│   │   └── spinner.js
+│   ├── toolbar/
+│   │   ├── toolbar.css
+│   │   ├── toolbar.html
+│   │   └── toolbar.js
+│   └── tabs/
+│       ├── tabs.css
+│       ├── tabs.css
+│       └── tabs.html
 ├── styles/
 │   ├── global.css
 ├── docs/
@@ -192,6 +196,15 @@ A customizable toolbar component with buttons for common actions.
 - **CSS**: `components/toolbar/toolbar.css`
 - **JavaScript**: `components/toolbar/toolbar.js`
 
+### Tabs
+
+A tabbed interface component for organizing content into separate sections.
+
+- **HTML**: `components/tabs/tabs.html`
+- **CSS**: `components/tabs/tabs.css`
+- **JavaScript**: `components/tabs/tabs.js`
+
+
 ## More Components Coming Soon
 - ~~Carousel/Slider~~
 - ~~Alert/Notification~~
@@ -200,12 +213,12 @@ A customizable toolbar component with buttons for common actions.
 - ~~Spinner/Loader~~
 - ~~Pagination~~
 - ~~Toolbars~~
-- Forms
-- Tabs
+- ~~Tabs~~
 - Dropdown Menus
 - Cards
 - Navigation Bars
 - Responsive Grid Layout
+- Forms
 
 ## Running the Project
 
