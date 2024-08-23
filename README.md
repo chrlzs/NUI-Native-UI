@@ -172,13 +172,21 @@ A customizable spinner/loader component that can be styled using global CSS vari
 - **CSS**: `components/spinner/spinner.css`
 - **JavaScript**: `components/spinner/spinner.js`
 
+### Pagination
+
+A pagination component that allows users to navigate through multiple pages.
+
+- **HTML**: `components/pagination/pagination.html`
+- **CSS**: `components/pagination/pagination.css`
+- **JavaScript**: `components/pagination/pagination.js`
+
 ## More Components Coming Soon
 - ~~Carousel/Slider~~
 - ~~Alert/Notification~~
 - ~~Progress Bar~~
 - ~~Breadcrumbs~~
 - ~~Spinner/Loader~~
-- Pagination
+- ~~Pagination~~
 - Toolbars
 - Forms
 - Tabs
