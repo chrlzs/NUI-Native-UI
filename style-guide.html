@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="/components/spinner/spinner.css">
     <link rel="stylesheet" href="/components/pagination/pagination.css">
     <link rel="stylesheet" href="/components/toolbar/toolbar.css">
+    <link rel="stylesheet" href="/components/tabs/tabs.css">
     </body>
 
 </head>
@@ -41,7 +42,7 @@
         <section id="modals">
             <h2>Modals</h2>
             <p>A modal dialog that can be triggered programmatically or via user interaction.</p>
-            <x-button  id="openModalButton">Open Modal</x-button>
+            <x-button id="openModalButton">Open Modal</x-button>
             <div class="modal" id="exampleModal">
                 <div class="modal-content">
                     <span class="close" id="closeModalButton">&times;</span>
@@ -55,7 +56,7 @@
             <h2>Tooltips</h2>
             <p>Tooltip implementation that can be shown/hidden programmatically.</p>
             <div class="tooltip-container">
-                <x-button  id="tooltipButton">Hover over me</x-button>
+                <x-button id="tooltipButton">Hover over me</x-button>
                 <div class="tooltip" id="tooltipText">This is a tooltip</div>
             </div>
         </section>
@@ -110,7 +111,7 @@
                 <span class="alert-text" id="alertText">This is an alert message!</span>
                 <span class="close-alert" id="closeAlertButton">&times;</span>
             </div>
-            <x-button  onclick="showAlert('This is a dynamic alert message!')">Show Alert</x-button>
+            <x-button onclick="showAlert('This is a dynamic alert message!')">Show Alert</x-button>
         </section>
         <!-- Progress Bar Component -->
         <section id="progress-bars">
@@ -119,7 +120,7 @@
             <div class="progress-bar-container">
                 <div class="progress-bar" id="progressBar"></div>
             </div>
-            <x-button  onclick="updateProgressBar(70)">Set Progress to 70%</x-button>
+            <x-button onclick="updateProgressBar(70)">Set Progress to 70%</x-button>
         </section>
         <!-- Breadcrumbs Component -->
         <section id="breadcrumbs">
@@ -146,7 +147,7 @@
             <p>A pagination component to navigate between pages of content.</p>
             <x-pagination></x-pagination>
         </section>
-         <!-- Toolbar Content -->
+        <!-- Toolbar Content -->
         <section id="toolbar">
             <h2>Toolbar</h2>
             <p>A customizable toolbar for common actions.</p>
@@ -155,6 +156,23 @@
                 <button class="toolbar-button" data-action="edit">Edit</button>
                 <button class="toolbar-button" data-action="delete">Delete</button>
             </x-toolbar>
+        </section>
+        <!-- Tabs Content -->
+        <section id="tabs">
+            <h2>Tabs</h2>
+            <p>A tabbed interface to organize content.</p>
+            <x-tabs>
+                <div slot="tab-buttons">
+                    <button class="tab-button active" data-tab="tab1">Tab 1</button>
+                    <button class="tab-button" data-tab="tab2">Tab 2</button>
+                    <button class="tab-button" data-tab="tab3">Tab 3</button>
+                </div>
+                <div slot="tab-content">
+                    <div class="tab-content active" id="tab1">Content for Tab 1</div>
+                    <div class="tab-content" id="tab2">Content for Tab 2</div>
+                    <div class="tab-content" id="tab3">Content for Tab 3</div>
+                </div>
+            </x-tabs>            
         </section>
     </main>
     <script src="/components/button/button.js"></script>
@@ -167,6 +185,6 @@
     <script src="/components/spinner/spinner.js"></script>
     <script src="/components/pagination/pagination.js"></script>
     <script src="/components/toolbar/toolbar.js"></script>
+    <script src="/components/tabs/tabs.js" type="module"></script>
 </body>
-
 </html>
