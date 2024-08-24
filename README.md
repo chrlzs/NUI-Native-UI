@@ -205,15 +205,7 @@ A tabbed interface component for organizing content into separate sections.
 - **JavaScript**: `components/tabs/tabs.js`
 
 
-## More Components Coming Soon
-- ~~Carousel/Slider~~
-- ~~Alert/Notification~~
-- ~~Progress Bar~~
-- ~~Breadcrumbs~~
-- ~~Spinner/Loader~~
-- ~~Pagination~~
-- ~~Toolbars~~
-- ~~Tabs~~
+## More Components Coming Soonss
 - Dropdown Menus
 - Cards
 - Navigation Bars
