@@ -205,7 +205,7 @@ A tabbed interface component for organizing content into separate sections.
 - **JavaScript**: `components/tabs/tabs.js`
 
 
-## More Components Coming Soonss
+## More Components Coming Soons
 - Dropdown Menus
 - Cards
 - Navigation Bars
