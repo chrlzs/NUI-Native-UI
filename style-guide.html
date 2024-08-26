@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="/components/pagination/pagination.css">
     <link rel="stylesheet" href="/components/toolbar/toolbar.css">
     <link rel="stylesheet" href="/components/tabs/tabs.css">
+    <link rel="stylesheet" href="/components/dropdown/dropdown.css">
     </body>
 
 </head>
@@ -165,24 +166,40 @@
                 <div slot="tab-buttons" data-tab="tab1" class="tab-button">Tab 1</div>
                 <div slot="tab-buttons" data-tab="tab2" class="tab-button">Tab 2</div>
                 <div slot="tab-buttons" data-tab="tab3" class="tab-button">Tab 3</div>
-            
+
                 <div slot="tab-contents" id="tab1" class="tab-content">Content 1</div>
                 <div slot="tab-contents" id="tab2" class="tab-content">Content 2</div>
                 <div slot="tab-contents" id="tab3" class="tab-content">Content 3</div>
             </x-tabs>
-                  
+        </section>
+        <!-- Dropdown Content -->
+        <!-- Dropdown Menu Component -->
+        <section id="dropdown">
+            <h2>Dropdown Menus</h2>
+            <p>Dropdown menu component with customizable options.</p>
+            <nui-dropdown>
+                <button slot="button">Dropdown Menu</button>
+                <div slot="menu">
+                    <a href="#">Option 1</a>
+                    <a href="#">Option 2</a>
+                    <a href="#">Option 3</a>
+                </div>
+            </nui-dropdown>
         </section>
     </main>
-    <script src="/components/button/button.js"></script>
-    <script src="/components/modal/modal.js"></script>
-    <script src="/components/tooltip/tooltip.js"></script>
-    <script src="/components/accordion/accordion.js"></script>
-    <script src="/components/carousel/carousel.js"></script>
-    <script src="/components/alert/alert.js"></script>
-    <script src="/components/progress-bar/progress-bar.js"></script>
-    <script src="/components/spinner/spinner.js"></script>
-    <script src="/components/pagination/pagination.js"></script>
-    <script src="/components/toolbar/toolbar.js"></script>
-    <script src="/components/tabs/tabs.js" type="module"></script>
+
+        <script src="/components/button/button.js" type="module"></script>
+        <script src="/components/modal/modal.js" type="module"></script>
+        <script src="/components/tooltip/tooltip.js" type="module"></script>
+        <script src="/components/accordion/accordion.js"></script>
+        <script src="/components/carousel/carousel.js" type="module"></script>
+        <script src="/components/alert/alert.js" type="module" type="module"></script>
+        <script src="/components/progress-bar/progress-bar.js" type="module"></script>
+        <script src="/components/spinner/spinner.js" type=" module"></script>
+        <script src="/components/pagination/pagination.js" type="module"></script>
+        <script src="/components/toolbar/toolbar.js" vtype="module"></script>
+        <script src="/components/tabs/tabs.js" type="module"></script>
+        <script src="/components/dropdown/dropdown.js" type="module"></script>
 </body>
+
 </html>

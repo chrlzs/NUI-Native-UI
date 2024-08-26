@@ -16,8 +16,17 @@
     --transition-speed: 0.3s;
     --transition-timing-function: ease;
     --font-size: 1em;
+    /* Spinner */
     --spinner-size: 40px;
     --spinner-border: 4px;
     --spinner-color: rgba(0, 123, 255, 1);
     --spinner-speed: 1s;
+    /* Dropdown */
+    --dropdown-button-bg: #007BFF;
+    --dropdown-button-color: #FFF;
+    --dropdown-button-hover-bg: #0056b3;
+    --dropdown-content-bg: #FFF;
+    --dropdown-content-border: #CCC;
+    --dropdown-content-color: #000;
+    --dropdown-content-hover-bg: #f1f1f1;
 }
