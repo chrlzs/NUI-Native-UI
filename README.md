@@ -214,7 +214,7 @@ A tabbed interface component for organizing content into separate sections.
 
 ## Running the Project
 
-To view the components in action, you can run a local web server. Here are a few methods to do that:
+To view the components in action, you can run a local web server. Here are a few methods:
 
 1. **Using Python**:
    ```sh
