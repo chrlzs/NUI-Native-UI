@@ -204,9 +204,27 @@ A tabbed interface component for organizing content into separate sections.
 - **CSS**: `components/tabs/tabs.css`
 - **JavaScript**: `components/tabs/tabs.js`
 
+### Dropdown Menus
+
+A dropdown menu component with customizable styles and functionality.
+
+- **HTML**: `components/dropdown/dropdown.html`
+- **CSS**: `components/dropdown/dropdown.css`
+- **JavaScript**: `components/dropdown/dropdown.js`
+
+#### Usage example:
+
+```html
+<nui-dropdown>
+    <button slot="button">Dropdown Menu</button>
+    <div slot="menu">
+        <a href="#">Option 1</a>
+        <a href="#">Option 2</a>
+        <a href="#">Option 3</a>
+    </div>
+</nui-dropdown>
 
 ## More Components Coming Soons
-- Dropdown Menus
 - Cards
 - Navigation Bars
 - Responsive Grid Layout
