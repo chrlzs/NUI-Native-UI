@@ -64,4 +64,4 @@ class NUIDropdown extends HTMLElement {
 }
 
 // Define the custom element
-customElements.define('nui-dropdown', NuiDropdown);
+customElements.define('nui-dropdown', NUIDropdown);
