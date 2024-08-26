@@ -223,6 +223,7 @@ A dropdown menu component with customizable styles and functionality.
         <a href="#">Option 3</a>
     </div>
 </nui-dropdown>
+```
 
 ## More Components Coming Soons
 - Cards
