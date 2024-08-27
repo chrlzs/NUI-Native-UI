@@ -7,19 +7,19 @@
     <title>NativeUI Style Guide</title>
     <link rel="stylesheet" href="/styles/global.css">
     <link rel="stylesheet" href="/style-guide.css">
-    <link rel="stylesheet" href="/components/modal/modal.css">
-    <link rel="stylesheet" href="/components/button/button.css">
-    <link rel="stylesheet" href="/components/tooltip/tooltip.css">
-    <link rel="stylesheet" href="/components/carousel/carousel.css">
-    <link rel="stylesheet" href="/components/accordion/accordion.css">
-    <link rel="stylesheet" href="/components/alert/alert.css">
-    <link rel="stylesheet" href="/components/progress-bar/progress-bar.css">
-    <link rel="stylesheet" href="/components/breadcrumbs/breadcrumbs.css">
-    <link rel="stylesheet" href="/components/spinner/spinner.css">
-    <link rel="stylesheet" href="/components/pagination/pagination.css">
-    <link rel="stylesheet" href="/components/toolbar/toolbar.css">
-    <link rel="stylesheet" href="/components/tabs/tabs.css">
-    <link rel="stylesheet" href="/components/dropdown/dropdown.css">
+    <link rel="stylesheet" href="/components/modal/nui-modal.css">
+    <link rel="stylesheet" href="/components/button/nui-button.css">
+    <link rel="stylesheet" href="/components/tooltip/nui-tooltip.css">
+    <link rel="stylesheet" href="/components/carousel/nui-carousel.css">
+    <link rel="stylesheet" href="/components/accordion/nui-accordion.css">
+    <link rel="stylesheet" href="/components/alert/nui-alert.css">
+    <link rel="stylesheet" href="/components/progress-bar/nui-progress-bar.htrml">
+    <link rel="stylesheet" href="/components/breadcrumbs/nui-breadcrumbs.css">
+    <link rel="stylesheet" href="/components/spinner/spinner-nui.css">
+    <link rel="stylesheet" href="/components/pagination/nui-pagination.css">
+    <link rel="stylesheet" href="/components/toolbar/nui-toolbar.css">
+    <link rel="stylesheet" href="/components/tabs/nui-tabs.css">
+    <link rel="stylesheet" href="/components/dropdown/nui-dropdown.css">
     </body>
 
 </head>
@@ -36,14 +36,14 @@
         <section id="buttons">
             <h2>Buttons</h2>
             <p>Standard button implementation using the NativeUI button component.</p>
-            <x-button>Click Me</x-button>
+            <nui-button>Click Me</nui-button>
         </section>
 
         <!-- Modal Component -->
         <section id="modals">
             <h2>Modals</h2>
             <p>A modal dialog that can be triggered programmatically or via user interaction.</p>
-            <x-button id="openModalButton">Open Modal</x-button>
+            <nui-button id="openModalButton">Open Modal</nui-button>
             <div class="modal" id="exampleModal">
                 <div class="modal-content">
                     <span class="close" id="closeModalButton">&times;</span>
@@ -57,7 +57,7 @@
             <h2>Tooltips</h2>
             <p>Tooltip implementation that can be shown/hidden programmatically.</p>
             <div class="tooltip-container">
-                <x-button id="tooltipButton">Hover over me</x-button>
+                <nui-button id="tooltipButton">Hover over me</nui-button>
                 <div class="tooltip" id="tooltipText">This is a tooltip</div>
             </div>
         </section>
@@ -112,7 +112,7 @@
                 <span class="alert-text" id="alertText">This is an alert message!</span>
                 <span class="close-alert" id="closeAlertButton">&times;</span>
             </div>
-            <x-button onclick="showAlert('This is a dynamic alert message!')">Show Alert</x-button>
+            <nui-button onclick="showAlert('This is a dynamic alert message!')">Show Alert</nui-button>
         </section>
         <!-- Progress Bar Component -->
         <section id="progress-bars">
@@ -121,7 +121,7 @@
             <div class="progress-bar-container">
                 <div class="progress-bar" id="progressBar"></div>
             </div>
-            <x-button onclick="updateProgressBar(70)">Set Progress to 70%</x-button>
+            <nui-button onclick="updateProgressBar(70)">Set Progress to 70%</nui-button>
         </section>
         <!-- Breadcrumbs Component -->
         <section id="breadcrumbs">
@@ -139,8 +139,59 @@
         <!-- Spinner Component -->
         <section id="spinner">
             <h2>Spinner/Loader</h2>
-            <p>A customizable spinner/loader component.</p>
-            <x-spinner></x-spinner>
+            <p>A customizable spinner/loader component.</p>            <!-- Alert Component -->
+            <section id="alerts">
+                <h2>Alerts</h2>
+                <p>A standard alert that can be closed by the user.</p>
+                <div class="alert" id="alertBox">
+                    <span class="alert-text" id="alertText">This is an alert message!</span>
+                    <span class="close-alert" id="closeAlertButton">&times;</span>
+                </div>
+                <nui-button onclick="showAlert('This is a dynamic alert message!')">Show Alert</nui-button>
+            </section>
+            <!-- Progress Bar Component -->
+            <section id="progress-bars">
+                <h2>Progress Bars</h2>
+                <p>A standard progress bar that can be updated programmatically.</p>
+                <div class="progress-bar-container">
+                    <div class="progress-bar" id="progressBar"></div>
+                </div>
+                <nui-button onclick="updateProgressBar(70)">Set Progress to 70%</nui-button>
+            </section>
+            <!-- Breadcrumbs Component -->
+            <section id="breadcrumbs">
+                <h2>Breadcrumbs</h2>
+                <p>A standard set of navigation breadcrumbs.</p>
+                <nav class="breadcrumbs">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Products</a></li>
+                        <li><a href="#">Electronics</a></li>
+                        <li class="active">Smartphones</li>
+                    </ul>
+                </nav>
+            </section>
+            <!-- Spinner Component -->
+            <section id="spinner">
+                <h2>Spinner/Loader</h2>
+                <p>A customizable spinner/loader component.</p>
+                <nui-spinner></nui-spinner>
+            </section>
+            <!-- Pagination Content -->
+            <section id="pagination">
+                <h2>Pagination</h2>
+                <p>A pagination component to navigate between pages of content.</p>
+                <nui-pagination></nui-pagination>
+            </section>
+            <!-- Toolbar Content -->
+            <section id="toolbar">
+                <h2>Toolbar</h2>
+                <p>A customizable toolbar for common actions.</p>
+                <nui-toolbar>
+                    <button class="toolbar-button" data-action="save">Save</button>
+                </nui-toolbar>
+            </section>
+            <nui-spinner></nui-spinner>
         </section>
         <!-- Pagination Content -->
         <section id="pagination">
@@ -173,33 +224,29 @@
             </x-tabs>
         </section>
         <!-- Dropdown Content -->
-        <!-- Dropdown Menu Component -->
         <section id="dropdown">
             <h2>Dropdown Menus</h2>
             <p>Dropdown menu component with customizable options.</p>
             <nui-dropdown>
-                <button slot="button">Dropdown Menu</button>
-                <div slot="menu">
-                    <a href="#">Option 1</a>
-                    <a href="#">Option 2</a>
-                    <a href="#">Option 3</a>
-                </div>
-            </nui-dropdown>
+                <button slot="button">Dropdown</button>
+                <a href="#">Option 1</a>
+                <a href="#">Option 2</a>
+            </nui-dropdown>            
         </section>
     </main>
 
-        <script src="/components/button/button.js" type="module"></script>
-        <script src="/components/modal/modal.js" type="module"></script>
-        <script src="/components/tooltip/tooltip.js" type="module"></script>
-        <script src="/components/accordion/accordion.js"></script>
-        <script src="/components/carousel/carousel.js" type="module"></script>
-        <script src="/components/alert/alert.js" type="module" type="module"></script>
-        <script src="/components/progress-bar/progress-bar.js" type="module"></script>
-        <script src="/components/spinner/spinner.js" type=" module"></script>
-        <script src="/components/pagination/pagination.js" type="module"></script>
-        <script src="/components/toolbar/toolbar.js" vtype="module"></script>
-        <script src="/components/tabs/tabs.js" type="module"></script>
-        <script src="/components/dropdown/dropdown.js" type="module"></script>
+        <script src="/components/button/nui-button.js" type="module"></script>
+        <script src="/components/modal/nui-modal.js" type="module"></script>
+        <script src="/components/tooltip/nui-tooltip.js" type="module"></script>
+        <script src="/components/accordion/nui-accordion.js"></script>
+        <script src="/components/carousel/nui-carousel.js" type="module"></script>
+        <script src="/components/alert/nui-alert.js" type="module" type="module"></script>
+        <script src="/components/progress-bar/nui-progress-bar.js" type="module"></script>
+        <script src="/components/spinner/nui-spinner.js" type=" module"></script>
+        <script src="/components/pagination/nui-pagination.js" type="module"></script>
+        <script src="/components/toolbar/nui-toolbar.js" vtype="module"></script>
+        <script src="/components/tabs/nui-tabs.js" type="module"></script>
+        <script src="/components/dropdown/nui-dropdown.js" type="module"></script>
 </body>
 
 </html>
