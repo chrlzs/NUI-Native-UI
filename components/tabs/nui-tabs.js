@@ -1,4 +1,4 @@
-class XTabs extends HTMLElement {
+class NUITabs extends HTMLElement {
     constructor() {
         super();
         const shadow = this.attachShadow({ mode: 'open' });
@@ -100,4 +100,4 @@ class XTabs extends HTMLElement {
     }
 }
 
-customElements.define('x-tabs', XTabs);
+customElements.define('nui-tabs', NUITabs);

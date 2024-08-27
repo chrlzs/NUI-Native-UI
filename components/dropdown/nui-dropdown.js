@@ -42,7 +42,7 @@ class NUIDropdown extends HTMLElement {
                 </div>
             </div>
         `;
-        
+
         // Use requestAnimationFrame to ensure DOM is updated
         requestAnimationFrame(() => this.addEventListeners());
     }
@@ -54,7 +54,9 @@ class NUIDropdown extends HTMLElement {
                 const button = buttonSlot.assignedNodes()[0];
                 if (button) {
                     button.addEventListener('click', () => {
-                        this.shadowRoot.querySelector('.nui-dropdown').classList.toggle('show');
+                        const dropdown = this.shadowRoot.querySelector('.nui-dropdown');
+                        const isExpanded = dropdown.classList.toggle('show');
+                        button.setAttribute('aria-expanded', isExpanded);
                     });
                 }
             });
@@ -62,10 +64,16 @@ class NUIDropdown extends HTMLElement {
             console.error('Button slot not found.');
         }
 
+        // Close dropdown when clicking outside
         document.addEventListener('click', (event) => {
             if (!this.contains(event.target)) {
                 this.shadowRoot.querySelector('.nui-dropdown').classList.remove('show');
             }
+        });
+
+        // Prevent event bubbling inside the dropdown
+        this.shadowRoot.querySelector('.nui-dropdown').addEventListener('click', (event) => {
+            event.stopPropagation();
         });
     }
 }
