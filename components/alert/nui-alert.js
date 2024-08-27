@@ -1,7 +1,6 @@
 class NUIAlert extends HTMLElement {
     constructor() {
         super();
-        alert('hi');
         this.attachShadow({ mode: 'open' });
         this.shadowRoot.innerHTML = `
             <style>
@@ -56,13 +55,14 @@ class NUIAlert extends HTMLElement {
 
 customElements.define('nui-alert', NUIAlert);
 
-function showAlert(message, type = 'info') {
+// Make showAlert globally accessible
+window.showAlert = function(message, type = 'info') {
     const alert = document.createElement('nui-alert');
     alert.classList.add(type); // Add the type class (success, info, warning, etc.)
-    alert.textContent = message;
+    alert.innerHTML = message; // Use innerHTML to insert the message
     document.body.appendChild(alert);
 
     setTimeout(() => {
         alert.remove();
     }, 3000); // Adjust the timeout as needed
-}
+};
