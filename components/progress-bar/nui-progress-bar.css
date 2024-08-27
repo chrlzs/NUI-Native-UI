@@ -1,18 +1,18 @@
-@import url('/styles/global.css');
-
+/* Container for the progress bar */
 .progress-bar-container {
-    width: 100%;
-    background-color: var(--light-color);
-    border-radius: 25px;
-    overflow: hidden;
-    height: 20px;
-    margin-bottom: 15px;
+    width: 100%; /* Ensure container spans full width */
+    background-color: var(--light-color, #e0e0e0); /* Light gray background */
+    border-radius: 25px; /* Rounded corners */
+    overflow: hidden; /* Prevent overflow */
+    height: 20px; /* Fixed height */
+    margin-bottom: 15px; /* Space below the progress bar */
 }
 
+/* The actual progress bar */
 .progress-bar {
-    width: 0;
-    height: 100%;
-    background-color: var(--success-color);
-    border-radius: 25px;
-    transition: width 0.4s ease;
+    width: 0%; /* Start with zero width */
+    height: 100%; /* Full height of the container */
+    background-color: var(--success-color, #4caf50); /* Green color by default */
+    border-radius: 25px; /* Rounded corners to match container */
+    transition: width 0.4s ease; /* Smooth width transition */
 }
