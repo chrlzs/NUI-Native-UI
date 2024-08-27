@@ -1,4 +1,4 @@
-class XSpinner extends HTMLElement {
+class NUISpinner extends HTMLElement {
     constructor() {
         super();
         const shadow = this.attachShadow({ mode: 'open' });
@@ -12,4 +12,4 @@ class XSpinner extends HTMLElement {
     }
 }
 
-customElements.define('x-spinner', XSpinner);
+customElements.define('nui-spinner', NUISpinner);

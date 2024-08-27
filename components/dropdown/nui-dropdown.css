@@ -1,0 +1,30 @@
+/* NUI-Dropdown Styles */
+.nui-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.nui-dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--dropdown-bg, #fff);
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 4px;
+}
+
+.nui-dropdown-content a {
+    color: var(--dropdown-text, #333);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.nui-dropdown-content a:hover {
+    background-color: var(--dropdown-hover-bg, #f1f1f1);
+}
+
+.nui-dropdown.show .nui-dropdown-content {
+    display: block;
+}

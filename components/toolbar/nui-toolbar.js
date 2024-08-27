@@ -1,4 +1,4 @@
-class XToolbar extends HTMLElement {
+class NUIToolbar extends HTMLElement {
     constructor() {
         super();
         this.attachShadow({ mode: 'open' });
@@ -56,4 +56,4 @@ class XToolbar extends HTMLElement {
     }
 }
 
-customElements.define('x-toolbar', XToolbar);
+customElements.define('nui-toolbar', NUIToolbar);

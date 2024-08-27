@@ -1,4 +1,4 @@
-class XPagination extends HTMLElement {
+class NUIPagination extends HTMLElement {
     constructor() {
         super();
         this.attachShadow({ mode: 'open' });
@@ -95,4 +95,4 @@ class XPagination extends HTMLElement {
     }
 }
 
-customElements.define('x-pagination', XPagination);
+customElements.define('nui-pagination', NUIPagination);
