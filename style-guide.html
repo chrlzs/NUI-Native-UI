@@ -177,13 +177,14 @@
         <section id="dropdown">
             <h2>Dropdown Menus</h2>
             <p>Dropdown menu component with customizable options.</p>
-            <nui-dropdown>
-                <button slot="button" aria-haspopup="true" aria-expanded="false">Dropdown</button>
-                <ul>
-                  <li><a href="#">Option 1</a></li>
-                  <li><a href="#">Option 2</a></li>
-                </ul>
-              </nui-dropdown>
+            <div class="nui-dropdown">
+                <button class="nui-dropdown-button" aria-haspopup="true" aria-expanded="false">Dropdown</button>
+                <div class="nui-dropdown-content">
+                    <a href="#">Option 1</a>
+                    <a href="#">Option 2</a>
+                    <a href="#">Option 3</a>
+                </div>
+            </div>
         </section>
 
     </main>
