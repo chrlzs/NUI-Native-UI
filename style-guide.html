@@ -151,18 +151,18 @@
         <section id="toolbar">
             <h2>Toolbar</h2>
             <p>A customizable toolbar for common actions.</p>
-            <x-toolbar>
+            <nui-toolbar>
                 <button class="toolbar-button" data-action="save">Save</button>
                 <button class="toolbar-button" data-action="edit">Edit</button>
                 <button class="toolbar-button" data-action="delete">Delete</button>
-            </x-toolbar>
+            </nui-toolbar>
         </section>
 
         <!-- Tabs Content -->
         <section id="tabs">
             <h2>Tabs</h2>
             <p>A tabbed interface to organize content.</p>
-            <x-tabs>
+            <nui-tabs>
                 <div slot="tab-buttons" data-tab="tab1" class="tab-button">Tab 1</div>
                 <div slot="tab-buttons" data-tab="tab2" class="tab-button">Tab 2</div>
                 <div slot="tab-buttons" data-tab="tab3" class="tab-button">Tab 3</div>
@@ -170,7 +170,7 @@
                 <div slot="tab-contents" id="tab1" class="tab-content">Content 1</div>
                 <div slot="tab-contents" id="tab2" class="tab-content">Content 2</div>
                 <div slot="tab-contents" id="tab3" class="tab-content">Content 3</div>
-            </x-tabs>
+            </nui-tabs>
         </section>
 
         <!-- Dropdown Content -->
@@ -178,10 +178,12 @@
             <h2>Dropdown Menus</h2>
             <p>Dropdown menu component with customizable options.</p>
             <nui-dropdown>
-                <button slot="button">Dropdown</button>
-                <a href="#">Option 1</a>
-                <a href="#">Option 2</a>
-            </nui-dropdown>
+                <button slot="button" aria-haspopup="true" aria-expanded="false">Dropdown</button>
+                <ul>
+                  <li><a href="#">Option 1</a></li>
+                  <li><a href="#">Option 2</a></li>
+                </ul>
+              </nui-dropdown>
         </section>
 
     </main>
