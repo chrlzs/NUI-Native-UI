@@ -42,54 +42,41 @@ NativeUI/
 ├── components/
 │   ├── button/
 │   │   ├── nui-button.css
-│   │   ├── nui-button.html
 │   │   └── nui-button.js
 │   ├── modal/
 │   │   ├── nui-modal.css
-│   │   ├── nui-modal.html
 │   │   └── nui-modal.js
 │   ├── tooltip/
 │   │   ├── nui-tooltip.css
-│   │   ├── nui-tooltip.html
 │   │   └── nui-tooltip.js
 │   ├── accordion/
 │   │   ├── nui-accordion.css
-│   │   ├── nui-accordion.html
 │   │   └── nui-accordion.js
 │   ├── carousel/
 │   │   ├── nui-carousel.css
-│   │   ├── nui-carousel.html
 │   │   └── nui-carousel.js
 │   ├── alert/
 │   │   ├── nui-alert.css
-│   │   ├── nui-alert.html
 │   │   └── nui-alert.js
 │   ├── progress-bar/
 │   │   ├── nui-progress-bar.css
-│   │   ├── nui-progress-bar.html
 │   │   └── nui-progress-bar.js
 │   ├── breadcrumbs/
 │   │   ├── nui-breadcrumbs.css
-│   │   ├── nui-breadcrumbs.html
 │   ├── nui-spinner/
 │   │   ├── nui-spinner.css
-│   │   ├── nui-spinner.html
 │   │   └── nui-spinner.js
 │   ├── toolbar/
 │   │   ├── nui-toolbar.css
-│   │   ├── nui-toolbar.html
 │   │   └── nui-toolbar.js
 │   ├── tabs/
 │   │   ├── nui-tabs.css
-│   │   ├── nui-tabs.html
 │   │   └── nui-tabs.js
 │   ├── dropdown/
 │   │   ├── nui-dropdown.css
-│   │   ├── nui-dropdown.html
 │   │   └── nui-dropdown.js
 │   ├── card/
 │   │   ├── nui-card.css
-│   │   ├── nui-card.html
 │   │   └── nui-card.js
 ├── styles/
 │   ├── global.css
