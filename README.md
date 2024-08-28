@@ -101,7 +101,6 @@ NativeUI/
 
 Standard button implementation using native HTML and CSS.
 
-- **HTML**: `components/nui-button/nui-button.html`
 - **CSS**: `components/nui-button/nui-button.css`
 - **JavaScript**: `components/nui-button/nui-button.js`
 
@@ -109,7 +108,6 @@ Standard button implementation using native HTML and CSS.
 
 A modal dialog that can be triggered programmatically or via user interaction.
 
-- **HTML**: `components/nui-modal/nui-modal.html`
 - **CSS**: `components/nui-modal/nui-modal.css`
 - **JavaScript**: `components/nui-modal/nui-modal.js`
 
@@ -117,7 +115,6 @@ A modal dialog that can be triggered programmatically or via user interaction.
 
 Tooltip implementation that can be shown/hidden programmatically.
 
-- **HTML**: `components/nui-tooltip/nui-tooltip.html`
 - **CSS**: `components/nui-tooltip/nui-tooltip.css`
 - **JavaScript**: `components/nui-tooltip/nui-tooltip.js`
 
@@ -125,7 +122,6 @@ Tooltip implementation that can be shown/hidden programmatically.
 
 An accordion component that can expand and collapse sections of content.
 
-- **HTML**: `components/nui-accordion/nui-accordion.html`
 - **CSS**: `components/nui-accordion/nui-accordion.css`
 - **JavaScript**: `components/nui-accordion/nui-accordion.js`
 
@@ -133,7 +129,6 @@ An accordion component that can expand and collapse sections of content.
 
 A responsive carousel/slider component that cycles through images or content.
 
-- **HTML**: `components/nui-carousel/nui-carousel.html`
 - **CSS**: `components/nui-carousel/nui-carousel.css`
 - **JavaScript**: `components/nui-carousel/nui-carousel.js`
 
@@ -143,7 +138,6 @@ The Carousel component includes controls for navigating between slides and is re
 
 A customizable alert/notification component that can be closed by the user or triggered programmatically.
 
-- **HTML**: `components/nui-alert/nui-alert.html`
 - **CSS**: `components/nui-alert/nui-alert.css`
 - **JavaScript**: `components/nui-alert/nui-alert.js`
 
@@ -153,7 +147,6 @@ The Alert/Notification component is flexible and allows for dynamic messages to 
 
 A customizable progress bar component that can be updated programmatically.
 
-- **HTML**: `components/nui-progress-bar/nui-progress-bar.html`
 - **CSS**: `components/nui-progress-bar/nui-progress-bar.css`
 - **JavaScript**: `components/nui-progress-bar/nui-progress-bar.js`
 
@@ -163,7 +156,6 @@ The Progress Bar component allows for dynamic updates to visually represent prog
 
 A breadcrumb navigation component to help users understand and navigate your website's hierarchy.
 
-- **HTML**: `components/nui-breadcrumbs/nui-breadcrumbs.html`
 - **CSS**: `components/nui-breadcrumbs/nui-breadcrumbs.css`
 - **JavaScript**: No JavaScript required for basic implementation.
 
@@ -171,7 +163,6 @@ A breadcrumb navigation component to help users understand and navigate your web
 
 A customizable spinner/loader component that can be styled using global CSS variables.
 
-- **HTML**: `components/nui-spinner/nui-spinner.html`
 - **CSS**: `components/nui-spinner/nui-spinner.css`
 - **JavaScript**: `components/nui-spinner/nui-spinner.js`
 
@@ -179,7 +170,6 @@ A customizable spinner/loader component that can be styled using global CSS vari
 
 A pagination component that allows users to navigate through multiple pages.
 
-- **HTML**: `components/nui-pagination/nui-pagination.html`
 - **CSS**: `components/nui-pagination/nui-pagination.css`
 - **JavaScript**: `components/nui-pagination/nui-pagination.js`
 
@@ -187,7 +177,6 @@ A pagination component that allows users to navigate through multiple pages.
 
 A customizable toolbar component with buttons for common actions.
 
-- **HTML**: `components/nui-toolbar/nui-toolbar.html`
 - **CSS**: `components/nui-toolbar/nui-toolbar.css`
 - **JavaScript**: `components/nui-toolbar/nui-toolbar.js`
 
@@ -195,7 +184,6 @@ A customizable toolbar component with buttons for common actions.
 
 A tabbed interface component for organizing content into separate sections.
 
-- **HTML**: `components/nui-tabs/nui-tabs.html`
 - **CSS**: `components/nui-tabs/nui-tabs.css`
 - **JavaScript**: `components/nui-tabs/nui-tabs.js`
 
@@ -203,7 +191,6 @@ A tabbed interface component for organizing content into separate sections.
 
 A dropdown menu component with customizable styles and functionality.
 
-- **HTML**: `components/nui-dropdown/nui-dropdown.html`
 - **CSS**: `components/nui-dropdown/nui-dropdown.css`
 - **JavaScript**: `components/nui-dropdown/nui-dropdown.js`
 
@@ -225,7 +212,6 @@ A dropdown menu component with customizable styles and functionality.
 
 A card interface component for organizing conten.
 
-- **HTML**: `components/cardss/nui-cards.html`
 - **CSS**: `components/cards/nui-cards.css`
 - **JavaScript**: `components/cards/nui-cards.js`
 
