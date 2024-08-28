@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="/components/toolbar/nui-toolbar.css">
     <link rel="stylesheet" href="/components/tabs/nui-tabs.css">
     <link rel="stylesheet" href="/components/dropdown/nui-dropdown.css">
+    <link rel="stylesheet" href="/components/card/nui-card.css">
     </body>
 
 </head>
@@ -186,6 +187,18 @@
                 </div>
             </div>
         </section>
+        
+        <!-- Card Content -->
+        <section>
+            <h2>Card</h2>
+            <nui-card>
+                <div slot="header">Card Title</div>
+                <div slot="body">
+                    This is the body of the card.
+                </div>
+                <div slot="footer">Footer Content</div>
+            </nui-card>
+        </section>
 
     </main>
 
@@ -201,6 +214,7 @@
     <script src="/components/toolbar/nui-toolbar.js" vtype="module"></script>
     <script src="/components/tabs/nui-tabs.js" type="module"></script>
     <script src="/components/dropdown/nui-dropdown.js" type="module"></script>
+    <script src="/components/card/nui-card.js" type="module"></script>
 </body>
 
 </html>
