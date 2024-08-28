@@ -41,48 +41,52 @@ Each component in this library is self-contained, meaning you can use only the c
 NativeUI/
 ├── components/
 │   ├── button/
-│   │   ├── button.css
-│   │   ├── button.html
-│   │   └── button.js
+│   │   ├── nui-button.css
+│   │   ├── nui-button.html
+│   │   └── nui-button.js
 │   ├── modal/
-│   │   ├── modal.css
-│   │   ├── modal.html
-│   │   └── modal.js
+│   │   ├── nui-modal.css
+│   │   ├── nui-modal.html
+│   │   └── nui-modal.js
 │   ├── tooltip/
-│   │   ├── tooltip.css
-│   │   ├── tooltip.html
-│   │   └── tooltip.js
+│   │   ├── nui-tooltip.css
+│   │   ├── nui-tooltip.html
+│   │   └── nui-tooltip.js
 │   ├── accordion/
-│   │   ├── accordion.css
-│   │   ├── accordion.html
-│   │   └── accordion.js
+│   │   ├── nui-accordion.css
+│   │   ├── nui-accordion.html
+│   │   └── nui-accordion.js
 │   ├── carousel/
-│   │   ├── carousel.css
-│   │   ├── carousel.html
-│   │   └── carousel.js
+│   │   ├── nui-carousel.css
+│   │   ├── nui-carousel.html
+│   │   └── nui-carousel.js
 │   ├── alert/
-│   │   ├── alert.css
-│   │   ├── alert.html
-│   │   └── alert.js
+│   │   ├── nui-alert.css
+│   │   ├── nui-alert.html
+│   │   └── nui-alert.js
 │   ├── progress-bar/
-│   │   ├── progress-bar.css
-│   │   ├── progress-bar.html
-│   │   └── progress-bar.js
+│   │   ├── nui-progress-bar.css
+│   │   ├── nui-progress-bar.html
+│   │   └── nui-progress-bar.js
 │   ├── breadcrumbs/
-│   │   ├── breadcrumbs.css
-│   │   ├── breadcrumbs.html
+│   │   ├── nui-breadcrumbs.css
+│   │   ├── nui-breadcrumbs.html
 │   ├── spinner/
-│   │   ├── spinner.css
-│   │   ├── spinner.html
-│   │   └── spinner.js
+│   │   ├── nui-spinner.css
+│   │   ├── nui-spinner.html
+│   │   └── nui-spinner.js
 │   ├── toolbar/
-│   │   ├── toolbar.css
-│   │   ├── toolbar.html
-│   │   └── toolbar.js
-│   └── tabs/
-│       ├── tabs.css
-│       ├── tabs.css
-│       └── tabs.html
+│   │   ├── nui-toolbar.css
+│   │   ├── nui-toolbar.html
+│   │   └── nui-toolbar.js
+│   ├── tabs/
+│   │   ├── nui-tabs.css
+│   │   ├── nui-tabs.html
+│   │   └── nui-tabs.js
+│   └── dropdown/
+│       ├── nui-dropdown.css
+│       ├── nui-dropdown.css
+│       └── nui-dropdown.html
 ├── styles/
 │   ├── global.css
 ├── docs/
