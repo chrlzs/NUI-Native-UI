@@ -230,6 +230,11 @@ A dropdown menu component with customizable styles and functionality.
 
 </nui-dropdown>
 ```
+## More Components Coming Soons
+- Cards
+- Navigation Bars
+- Responsive Grid Layout
+- Forms
 
 ## Running the Project
 
