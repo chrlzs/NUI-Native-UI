@@ -1,0 +1,22 @@
+.nui-card {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+.nui-card-header {
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.nui-card-body {
+    margin-bottom: 8px;
+}
+
+.nui-card-footer {
+    text-align: right;
+    font-size: 0.9em;
+    color: #777;
+}

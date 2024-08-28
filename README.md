@@ -40,53 +40,57 @@ Each component in this library is self-contained, meaning you can use only the c
 ```
 NativeUI/
 ├── components/
-│   ├── nui-button/
+│   ├── button/
 │   │   ├── nui-button.css
 │   │   ├── nui-button.html
 │   │   └── nui-button.js
-│   ├── nui-modal/
+│   ├── modal/
 │   │   ├── nui-modal.css
 │   │   ├── nui-modal.html
 │   │   └── nui-modal.js
-│   ├── nui-tooltip/
+│   ├── tooltip/
 │   │   ├── nui-tooltip.css
 │   │   ├── nui-tooltip.html
 │   │   └── nui-tooltip.js
-│   ├── nui-accordion/
+│   ├── accordion/
 │   │   ├── nui-accordion.css
 │   │   ├── nui-accordion.html
 │   │   └── nui-accordion.js
-│   ├── nui-carousel/
+│   ├── carousel/
 │   │   ├── nui-carousel.css
 │   │   ├── nui-carousel.html
 │   │   └── nui-carousel.js
-│   ├── nui-alert/
+│   ├── alert/
 │   │   ├── nui-alert.css
 │   │   ├── nui-alert.html
 │   │   └── nui-alert.js
-│   ├── nui-progress-bar/
+│   ├── progress-bar/
 │   │   ├── nui-progress-bar.css
 │   │   ├── nui-progress-bar.html
 │   │   └── nui-progress-bar.js
-│   ├── nui-breadcrumbs/
+│   ├── breadcrumbs/
 │   │   ├── nui-breadcrumbs.css
 │   │   ├── nui-breadcrumbs.html
 │   ├── nui-spinner/
 │   │   ├── nui-spinner.css
 │   │   ├── nui-spinner.html
 │   │   └── nui-spinner.js
-│   ├── nui-toolbar/
+│   ├── toolbar/
 │   │   ├── nui-toolbar.css
 │   │   ├── nui-toolbar.html
 │   │   └── nui-toolbar.js
-│   ├── nui-tabs/
+│   ├── tabs/
 │   │   ├── nui-tabs.css
 │   │   ├── nui-tabs.html
 │   │   └── nui-tabs.js
-│   ├── nui-dropdown/
+│   ├── dropdown/
 │   │   ├── nui-dropdown.css
 │   │   ├── nui-dropdown.html
 │   │   └── nui-dropdown.js
+│   ├── card/
+│   │   ├── nui-card.css
+│   │   ├── nui-card.html
+│   │   └── nui-card.js
 ├── styles/
 │   ├── global.css
 ├── docs/
@@ -230,8 +234,15 @@ A dropdown menu component with customizable styles and functionality.
 
 </nui-dropdown>
 ```
+### NUI Cards
+
+A card interface component for organizing conten.
+
+- **HTML**: `components/cardss/nui-cards.html`
+- **CSS**: `components/cards/nui-cards.css`
+- **JavaScript**: `components/cards/nui-cards.js`
+
 ## More Components Coming Soons
-- Cards
 - Navigation Bars
 - Responsive Grid Layout
 - Forms
