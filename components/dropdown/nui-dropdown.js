@@ -1,17 +1,6 @@
 class NUIDropdown extends HTMLElement {
     constructor() {
         super();
-        const template = document.getElementById('nui-dropdown-template');
-        const templateContent = template.content;
-        this.attachShadow({ mode: 'open' }).appendChild(templateContent.cloneNode(true));
-
-        this.dropdownButton = this.shadowRoot.querySelector('.dropdown-button');
-        this.dropdownContent = this.shadowRoot.querySelector('.dropdown-content');
-
-        this.dropdownButton.addEventListener('click', () => {
-            this.dropdownContent.classList.toggle('show');
-        });
-
         // Close the dropdown if the user clicks outside of it
         document.addEventListener('click', (event) => {
             if (!this.contains(event.target) && this.dropdownContent.classList.contains('show')) {
