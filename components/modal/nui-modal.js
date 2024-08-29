@@ -1,48 +1,67 @@
 class NUIModal extends HTMLElement {
     constructor() {
         super();
-        const shadow = this.attachShadow({ mode: 'open' });
+        this.attachShadow({ mode: 'open' });
+        this._isInitialClick = true; // Track initial click to prevent immediate closing
+    }
 
-        // Create a link element to import the external CSS file
+    connectedCallback() {
+        this.render();
+        this.setupEventListeners();
+    }
+
+    render() {
         const link = document.createElement('link');
         link.rel = 'stylesheet';
-        link.href = '/components/modal/nui-modal.css';
+        link.href = '/components/modal/nui-modal.css'; // Update to correct path if necessary
 
-        // Set up the modal structure
-        shadow.innerHTML = `
+        this.shadowRoot.innerHTML = `
             <div class="modal">
                 <div class="modal-content">
                     <button class="close-btn">&times;</button>
-                    <slot></slot> <!-- Content inside the modal -->
+                    <slot></slot>
                 </div>
             </div>
         `;
 
-        // Append the stylesheet link
-        shadow.appendChild(link);
-
-        // Event listener for closing the modal
-        const closeButton = shadow.querySelector('.close-btn');
-        closeButton.addEventListener('click', () => this.hide());
-
-        // Automatically show or hide based on the attribute
-        if (this.hasAttribute('open')) {
-            this.show();
-        } else {
-            this.hide();
-        }
+        this.shadowRoot.appendChild(link);
     }
 
-    // Method to show the modal
+    setupEventListeners() {
+        const modal = this.shadowRoot.querySelector('.modal');
+        const closeButton = this.shadowRoot.querySelector('.close-btn');
+        const modalContent = this.shadowRoot.querySelector('.modal-content');
+
+        closeButton.addEventListener('click', (e) => {
+            e.stopPropagation(); // Prevent click event from propagating to modal
+            this.hide();
+        });
+
+        modalContent.addEventListener('click', (e) => {
+            e.stopPropagation(); // Prevent click event from propagating to modal
+        });
+
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal && !this._isInitialClick) {
+                this.hide();
+            }
+            this._isInitialClick = false; // Reset after the first click
+        });
+
+        // Initially hide the modal
+        this.hide();
+    }
+
     show() {
         const modal = this.shadowRoot.querySelector('.modal');
         modal.style.display = 'block';
+        // Use requestAnimationFrame to ensure the display change has taken effect
         requestAnimationFrame(() => {
             modal.style.opacity = '1';
+            this._isInitialClick = true; // Reset for next opening
         });
     }
 
-    // Method to hide the modal
     hide() {
         const modal = this.shadowRoot.querySelector('.modal');
         modal.style.opacity = '0';
@@ -51,7 +70,6 @@ class NUIModal extends HTMLElement {
         }, { once: true });
     }
 
-    // Respond to attribute changes
     static get observedAttributes() {
         return ['open'];
     }
@@ -69,20 +87,27 @@ class NUIModal extends HTMLElement {
 
 customElements.define('nui-modal', NUIModal);
 
-document.addEventListener("DOMContentLoaded", function() {
+// Setup function to be called after DOM is fully loaded
+function setup() {
     const openModalButton = document.getElementById("openModalButton");
     const modal = document.getElementById("exampleModal");
 
-    openModalButton.onclick = function() {
-        modal.setAttribute('open', ''); // Show the modal by setting the 'open' attribute
-    };
+    if (openModalButton && modal) {
+        openModalButton.addEventListener('click', function(e) {
+            e.stopPropagation(); // Prevent any potential bubbling
+            e.preventDefault(); // Prevent any default button behavior
+            setTimeout(() => { // Delay setting the attribute to next tick
+                modal.setAttribute('open', '');
+            }, 0);
+        });
+    } else {
+        console.error('Modal or open button not found');
+    }
+}
 
-    // Close the modal when the close button or the modal background is clicked
-    modal.addEventListener('click', function(event) {
-        const closeModalButton = modal.shadowRoot.querySelector('.close-btn');
-        const modalContent = modal.shadowRoot.querySelector('.modal-content');
-        if (event.target === closeModalButton || !modalContent.contains(event.target)) {
-            modal.removeAttribute('open'); // Hide the modal by removing the 'open' attribute
-        }
-    });
-});
+// Ensure the DOM is fully loaded before running setup
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', setup);
+} else {
+    setup();
+}
