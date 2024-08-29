@@ -1,5 +1,6 @@
 @import url('/styles/global.css');
 
+:root {
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -124,4 +125,7 @@ p {
     color: var(--dark-color);
     text-decoration: none;
     cursor: pointer;
+}
+
+
 }

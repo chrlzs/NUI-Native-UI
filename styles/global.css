@@ -29,4 +29,10 @@
     --dropdown-content-border: #CCC;
     --dropdown-content-color: #000;
     --dropdown-content-hover-bg: #f1f1f1;
+    /* Navbar Variables */
+    --navbar-background-color: #000;
+    --navbar-text-color: #fff;
+    --navbar-link-color: #fff;
+    --navbar-toggle-color: #fff;
+    
 }
