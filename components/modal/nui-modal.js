@@ -13,7 +13,7 @@ class NUIModal extends HTMLElement {
     render() {
         const link = document.createElement('link');
         link.rel = 'stylesheet';
-        link.href = '/components/modal/nui-modal.css'; // Update to correct path if necessary
+        link.href = '/components/modal/nui-modal.css';
 
         this.shadowRoot.innerHTML = `
             <div class="modal">
