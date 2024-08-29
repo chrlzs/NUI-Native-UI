@@ -210,7 +210,7 @@ A dropdown menu component with customizable styles and functionality.
 ```
 ### NUI Cards
 
-A card interface component for organizing conten.
+A card interface component for organizing content.
 
 - **CSS**: `components/cards/nui-cards.css`
 - **JavaScript**: `components/cards/nui-cards.js`
