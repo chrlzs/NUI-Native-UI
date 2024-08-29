@@ -2,22 +2,21 @@ class NUIButton extends HTMLElement {
     constructor() {
         super();
         const shadow = this.attachShadow({ mode: 'open' });
-        shadow.innerHTML = `
-            <style>
-                button {
-                    padding: 10px 20px;
-                    background-color: var(--btn-bg, #007BFF);
-                    color: var(--btn-color, #FFF);
-                    border: none;
-                    border-radius: 5px;
-                    cursor: pointer;
-                }
-                button:hover {
-                    background-color: var(--btn-bg-hover, #0056b3);
-                }
-            </style>
-            <button><slot></slot></button>
+
+        // Create a link element to import the external CSS file
+        const link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.href = '/components/button/nui-button.css';
+
+        // Create a wrapper div for content
+        const wrapper = document.createElement('div');
+        wrapper.innerHTML = `
+            <button class="button"><slot></slot></button>
         `;
+
+        // Append the link and wrapper to the shadow DOM
+        shadow.appendChild(link);
+        shadow.appendChild(wrapper);
     }
 }
 

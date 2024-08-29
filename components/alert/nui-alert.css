@@ -1,7 +1,4 @@
-@import url('/styles/global.css');
-
-
-.alert {
+  .alert {
     padding: 15px;
     background-color: var(--danger-color);
     color: var(--light-color);

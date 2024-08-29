@@ -1,6 +1,3 @@
-@import url('/styles/global.css');
-
-
 .button {
     font-family: var(--font-family);
     background-color: var(--primary-color);
