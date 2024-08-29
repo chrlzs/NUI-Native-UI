@@ -58,10 +58,13 @@
         <section id="tooltips">
             <h2>Tooltips</h2>
             <p>Tooltip implementation that can be shown/hidden programmatically.</p>
-            <div class="tooltip-container">
-                <nui-button id="tooltipButton">Hover over me</nui-button>
-                <div class="tooltip" id="tooltipText">This is a tooltip</div>
-            </div>
+        <!-- nui-tooltip Component -->
+        <nui-tooltip>
+            <span slot="trigger">
+                <nui-button>Hover over me</nui-button>
+            </span>
+            <span slot="content">This is a tooltip</span>
+        </nui-tooltip>
         </section>
 
         <!-- Accordion Component -->
