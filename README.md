@@ -222,14 +222,28 @@ A card interface component for organizing content.
 
 ## Running the Project
 
-To run the project locally:
+To view the components in action, you can run a local web server. Here are a few methods:
 
-1. Open `index.html` in your preferred web browser to see the components in action.
-2. Alternatively, use the following commands to start a simple HTTP server:
-    ```sh
-    npx http-server ./
-    ```
-   Then, navigate to `http://localhost:8080` in your browser.
+1. **Using Python**:
+   ```sh
+   python -m http.server
+   ```
+   This will serve the project at `http://localhost:8000`.
+
+2. **Using Node.js (http-server)**:
+   - First, install `http-server` globally if you haven't already:
+     ```sh
+     npm install -g http-server
+     ```
+   - Then, run the server:
+     ```sh
+     http-server
+     ```
+   This will serve the project at `http://localhost:8080`.
+
+3. **Using Live Server (VS Code Extension)**:
+   - Install the Live Server extension in VS Code.
+   - Right-click `index.html` and select **Open with Live Server**.
 
 ## Contributing
 
