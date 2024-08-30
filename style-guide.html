@@ -57,38 +57,42 @@
         <section id="tooltips">
             <h2>Tooltips</h2>
             <p>Tooltip implementation that can be shown/hidden programmatically.</p>
-        <!-- nui-tooltip Component -->
-        <nui-tooltip>
-            <span slot="trigger">
-                <nui-button>Hover over me</nui-button>
-            </span>
-            <span slot="content">This is a tooltip</span>
-        </nui-tooltip>
+            <!-- nui-tooltip Component -->
+            <nui-tooltip>
+                <span slot="trigger">
+                    <nui-button>Hover over me</nui-button>
+                </span>
+                <span slot="content">This is a tooltip</span>
+            </nui-tooltip>
         </section>
 
         <!-- Accordion Component -->
         <section id="accordion">
             <h2>Accordion</h2>
             <p>An accordion component that can expand and collapse sections of content.</p>
-            <div class="accordion-item">
-                <button class="accordion-header">Section 1</button>
-                <div class="accordion-content">
+
+            <nui-accordion>
+                <span slot="header">Section 1</span>
+                <div slot="content">
                     <p>This is the content for section 1.</p>
                 </div>
-            </div>
-            <div class="accordion-item">
-                <button class="accordion-header">Section 2</button>
-                <div class="accordion-content">
+            </nui-accordion>
+
+            <nui-accordion>
+                <span slot="header">Section 2</span>
+                <div slot="content">
                     <p>This is the content for section 2.</p>
                 </div>
-            </div>
-            <div class="accordion-item">
-                <button class="accordion-header">Section 3</button>
-                <div class="accordion-content">
+            </nui-accordion>
+
+            <nui-accordion>
+                <span slot="header">Section 3</span>
+                <div slot="content">
                     <p>This is the content for section 3.</p>
                 </div>
-            </div>
+            </nui-accordion>
         </section>
+
 
         <!-- Carousel/Slider Component -->
         <section id="carousel">
