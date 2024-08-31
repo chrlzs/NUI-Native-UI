@@ -194,20 +194,6 @@ A dropdown menu component with customizable styles and functionality.
 - **CSS**: `components/nui-dropdown/nui-dropdown.css`
 - **JavaScript**: `components/nui-dropdown/nui-dropdown.js`
 
-#### Usage example:
-
-```html
-<nui-dropdown>
-    <button slot="button">Dropdown Menu</button>
-    <div slot="menu">
-        <a href="#">Option 1</a>
-        <a href="#">Option 2</a>
-        <a href="#">Option 3</a>
-    </div>
-
-
-</nui-dropdown>
-```
 ### NUI Cards
 
 A card interface component for organizing content.
