@@ -1,27 +1,41 @@
-  .alert {
-    padding: 15px;
-    background-color: var(--danger-color);
-    color: var(--light-color);
-    margin-bottom: 15px;
-    border-radius: 5px;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  
-  .alert-text {
-    flex-grow: 1;
-  }
-  
-  .close-alert {
-    color: white;
-    font-weight: bold;
-    cursor: pointer;
-    font-size: 18px;
-  }
-  
-  .close-alert:hover {
-    color: black;
-  }
-  
+.alert {
+  padding: 15px;
+  background-color: var(--alert-bg, #f44336); /* Red by default */
+  color: var(--alert-color, white);
+  margin-bottom: 15px;
+  border-radius: 5px;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.alert.success {
+  background-color: var(--alert-bg-success, #4CAF50); /* Green */
+}
+
+.alert.info {
+  background-color: var(--alert-bg-info, #2196F3); /* Blue */
+}
+
+.alert.warning {
+  background-color: var(--alert-bg-warning, #ff9800); /* Orange */
+}
+
+.close-btn {
+  margin-left: 15px;
+  color: var(--alert-color, white);
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 22px;
+  line-height: 20px;
+  transition: 0.3s;
+}
+
+.close-btn:hover {
+  color: black;
+}
