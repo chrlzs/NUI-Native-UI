@@ -12,6 +12,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  max-width: calc(100% - 40px); /* Ensure the alert doesn't expand beyond the viewport */
+  box-sizing: border-box; /* Include padding and border in the element's width and height */
 }
 
 .alert.success {
@@ -34,6 +36,7 @@
   font-size: 22px;
   line-height: 20px;
   transition: 0.3s;
+  padding-right: 10px; /* Add padding to the right of the close button */
 }
 
 .close-btn:hover {
