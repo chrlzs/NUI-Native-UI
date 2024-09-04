@@ -118,15 +118,13 @@
             <nui-button onclick="showAlert('This is an alert message!', 'success')">Show Alert</nui-button>
         </section>
 
-        <!-- Progress Bar Component -->
-        <section id="progress-bars">
-            <h2>Progress Bars</h2>
-            <p>A standard progress bar that can be updated programmatically.</p>
-            <div class="progress-bar-container">
-                <div class="progress-bar" id="progressBar"></div>
-            </div>
-            <nui-button onclick="updateProgressBar(70)">Set Progress to 70%</nui-button>
-        </section>
+<!-- Progress Bar Component -->
+<section id="progress-bars">
+    <h2>Progress Bars</h2>
+    <p>A standard progress bar that can be updated programmatically.</p>
+    <nui-progress-bar id="progressBar" progress="0"></nui-progress-bar>
+    <nui-button onclick="updateProgressBar(70)">Set Progress to 70%</nui-button>
+</section>
 
         <!-- Breadcrumbs Component -->
         <section id="breadcrumbs">
