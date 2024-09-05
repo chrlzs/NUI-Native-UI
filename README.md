@@ -63,6 +63,7 @@ NativeUI/
 │   │   └── nui-progress-bar.js
 │   ├── breadcrumbs/
 │   │   ├── nui-breadcrumbs.css
+│   │   └── nui-breadcrumbs.js
 │   ├── nui-spinner/
 │   │   ├── nui-spinner.css
 │   │   └── nui-spinner.js
