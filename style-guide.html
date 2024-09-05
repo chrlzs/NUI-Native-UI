@@ -126,19 +126,17 @@
     <nui-button onclick="updateProgressBar(70)">Set Progress to 70%</nui-button>
 </section>
 
-        <!-- Breadcrumbs Component -->
-        <section id="breadcrumbs">
-            <h2>Breadcrumbs</h2>
-            <p>A standard set of navigation breadcrumbs.</p>
-            <nav class="breadcrumbs">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Products</a></li>
-                    <li><a href="#">Electronics</a></li>
-                    <li class="active">Smartphones</li>
-                </ul>
-            </nav>
-        </section>
+<!-- Breadcrumbs Component -->
+<section id="breadcrumbs">
+    <h2>Breadcrumbs</h2>
+    <p>A standard set of navigation breadcrumbs.</p>
+    <nui-breadcrumbs>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Products</a></li>
+        <li><a href="#">Electronics</a></li>
+        <li class="active">Smartphones</li>
+    </nui-breadcrumbs>
+</section>
 
         <!-- Spinner Component -->
         <section id="spinner">
@@ -215,6 +213,7 @@
     <script src="/components/carousel/nui-carousel.js" type="module"></script>
     <script src="/components/alert/nui-alert.js" type="module"></script>
     <script src="/components/progress-bar/nui-progress-bar.js" type="module"></script>
+    <script src="/components/breadcrumbs/nui-breadcrumbs.js" type="module"></script>
     <script src="/components/spinner/nui-spinner.js" type="module"></script>
     <script src="/components/pagination/nui-pagination.js" type="module"></script>
     <script src="/components/toolbar/nui-toolbar.js" vtype="module"></script>
