@@ -3,10 +3,10 @@
 NUI is a lightweight front-end component library that doesn't require any third-party libraries. It leverages modern HTML, CSS, and JavaScript to provide a solid foundation for simple web projects without the overhead and complexity of larger frameworks.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![GitHub issues](https://img.shields.io/github/issues/chrlzs/NativeUI.svg)](https://github.com/chrlzs/NativeUI/issues)
-[![GitHub forks](https://img.shields.io/github/forks/chrlzs/NativeUI.svg)](https://github.com/chrlzs/NativeUI/network)
-[![GitHub stars](https://img.shields.io/github/stars/chrlzs/NativeUI.svg)](https://github.com/chrlzs/NativeUI/stargazers)
-[![GitHub contributors](https://img.shields.io/github/contributors/chrlzs/NativeUI.svg)](https://github.com/chrlzs/NativeUI/graphs/contributors)
+[![GitHub issues](https://img.shields.io/github/issues/chrlzs/NUI-Native-UI.svg)](https://github.com/chrlzs/NUI-Native-UI/issues)
+[![GitHub forks](https://img.shields.io/github/forks/chrlzs/NUI-Native-UI.svg)](https://github.com/chrlzs/NUI-Native-UI/network)
+[![GitHub stars](https://img.shields.io/github/stars/chrlzs/NUI-Native-UI.svg)](https://github.com/chrlzs/NUI-Native-UI/stargazers)
+[![GitHub contributors](https://img.shields.io/github/contributors/chrlzs/NUI-Native-UI.svg)](https://github.com/chrlzs/NUI-Native-UI/graphs/contributors)
 
 ## Table of Contents
 
@@ -22,7 +22,7 @@ NUI is a lightweight front-end component library that doesn't require any third-
 
 1. Clone the repository:
     ```sh
-    git clone https://github.com/chrlzs/NativeUI.git
+    git clone https://github.com/chrlzs/NUI-Native-UI.git
     ```
 2. Navigate to the project directory:
     ```sh
