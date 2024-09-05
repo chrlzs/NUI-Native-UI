@@ -1,4 +1,4 @@
-# NativeUI
+# NUI (Native UI)
 
 NativeUI is a lightweight front-end component library that doesn't require any third-party libraries. It leverages modern HTML, CSS, and JavaScript to provide a solid foundation for simple web projects without the overhead and complexity of larger frameworks.
 
