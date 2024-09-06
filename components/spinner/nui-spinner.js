@@ -1,31 +1,25 @@
 class NUISpinner extends HTMLElement {
     constructor() {
         super();
-        // Define the template directly in JavaScript
-        const template = document.createElement('template');
-        template.innerHTML = `
-            <style>
-                /* Default styles for the spinner */
-                .spinner {
-                    border: 4px solid rgba(0, 0, 0, 0.1);
-                    border-radius: 50%;
-                    border-top: 4px solid #3498db;
-                    width: 40px;
-                    height: 40px;
-                    animation: spin 1s linear infinite;
-                }
+        this.attachShadow({ mode: 'open' });
 
-                @keyframes spin {
-                    0% { transform: rotate(0deg); }
-                    100% { transform: rotate(360deg); }
-                }
-            </style>
-            <div class="spinner"></div>
+        // Attach external CSS
+        const link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.href = '/components/spinner/nui-spinner.css'; // Adjust the path as needed
+        this.shadowRoot.appendChild(link);
+
+        // Attach the inner structure of the component
+        this.shadowRoot.innerHTML += `
+            <div class="spinner-container">
+                <div class="spinner"></div>
+            </div>
         `;
+    }
 
-        // Attach shadow DOM and add the template content
-        const shadowRoot = this.attachShadow({ mode: 'open' });
-        shadowRoot.appendChild(template.content.cloneNode(true));
+    // Called when the element is added to the DOM
+    connectedCallback() {
+        // Any additional functionality can be added here if necessary
     }
 }
 
