@@ -4,48 +4,38 @@
     align-items: center;
     font-size: var(--font-size); /* Use global font size */
     margin-bottom: var(--border-radius); /* Use border-radius as margin for consistent spacing */
-    background-color: purple;
 }
 
-.breadcrumbs ::slotted(ul) {
-    list-style: none;
-    display: flex;
-    padding: 0;
-    margin: 0;
-    background-color: red;
-  }
-  
-  .breadcrumbs ::slotted(li) {
+nui-breadcrumbs ul li {
     display: inline-block;
     margin-right: 10px;
   }
 
-.breadcrumbs ul li {
+  nui-breadcrumbs ul li {
     margin-right: var(--border-radius); /* Use border-radius as a small margin between breadcrumb items */
 }
 
-.breadcrumbs ul li::after {
+nui-breadcrumbs ul li::after {
     content: "/";
     margin-left: var(--border-radius); /* Use consistent spacing */
 }
 
-.breadcrumbs ul li:last-child::after {
+nui-breadcrumbs ul li:last-child::after {
     content: ""; /* No separator for the last item */
     margin-left: 0;
 }
 
-.breadcrumbs ul li a {
+nui-breadcrumbs ul li a {
     text-decoration: none;
     color: var(--primary-color); /* Use primary color for breadcrumb links */
     transition: color var(--transition-speed) var(--transition-timing-function); /* Smooth color transition */
-    color: white;
 }
 
-.breadcrumbs ul li a:hover {
+nui-breadcrumbs ul li a:hover {
     color: var(--dropdown-button-hover-bg); /* Use dropdown hover background color for link hover state */
 }
 
-.breadcrumbs ul li.active {
+nui-breadcrumbs ul li.active {
     font-weight: bold;
     color: var(--dark-color); /* Dark color for the active breadcrumb */
     pointer-events: none; /* Disable click on active item */
