@@ -3,18 +3,24 @@ class NUIPagination extends HTMLElement {
         super();
         this.attachShadow({ mode: 'open' });
         this.currentPage = 1;
-        this.totalPages = 3; // Adjust this dynamically as needed
+        this.totalPages = 3; // Adjust dynamically as needed
 
-        this.shadowRoot.innerHTML = `
-            <style>
-                ${this.getStyles()}
-            </style>
+        // Attach external CSS
+        const link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.href = '/components/pagination/nui-pagination.css'; // Adjust the path as needed
+        this.shadowRoot.appendChild(link);
+
+        // Inner structure of the component
+        const template = document.createElement('template');
+        template.innerHTML = `
             <div class="pagination">
                 <button class="pagination-button" data-page="prev">&laquo;</button>
                 ${this.renderButtons()}
                 <button class="pagination-button" data-page="next">&raquo;</button>
             </div>
         `;
+        this.shadowRoot.appendChild(template.content.cloneNode(true));
 
         this.prevButton = this.shadowRoot.querySelector('[data-page="prev"]');
         this.nextButton = this.shadowRoot.querySelector('[data-page="next"]');
@@ -22,40 +28,6 @@ class NUIPagination extends HTMLElement {
 
         this.updateButtons();
         this.addEventListeners();
-    }
-
-    getStyles() {
-        return `
-            .pagination {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                gap: 8px;
-                padding: 10px;
-            }
-
-            .pagination-button {
-                padding: 8px 16px;
-                background-color: var(--btn-bg, #007BFF);
-                color: var(--btn-color, #FFF);
-                border: none;
-                border-radius: 5px;
-                cursor: pointer;
-            }
-
-            .pagination-button:hover {
-                background-color: var(--btn-bg-hover, #0056b3);
-            }
-
-            .pagination-button[disabled] {
-                background-color: var(--btn-disabled-bg, #d6d6d6);
-                cursor: not-allowed;
-            }
-
-            .pagination-button.active {
-                background-color: var(--btn-active-bg, #0056b3);
-            }
-        `;
     }
 
     renderButtons() {
@@ -95,4 +67,5 @@ class NUIPagination extends HTMLElement {
     }
 }
 
+// Define the custom element
 customElements.define('nui-pagination', NUIPagination);
