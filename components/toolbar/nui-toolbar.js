@@ -3,57 +3,41 @@ class NUIToolbar extends HTMLElement {
         super();
         this.attachShadow({ mode: 'open' });
 
-        this.shadowRoot.innerHTML = `
-            <style>
-                ${this.getStyles()}
-            </style>
+        // Attach external CSS
+        const link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.href = '/components/toolbar/nui-toolbar.css'; // Adjust the path to your CSS
+        this.shadowRoot.appendChild(link);
+
+        // Inner structure of the toolbar
+        const template = document.createElement('template');
+        template.innerHTML = `
             <div class="toolbar">
                 <slot></slot>
             </div>
         `;
+        this.shadowRoot.appendChild(template.content.cloneNode(true));
 
+        // Fetch buttons inside the toolbar
         this.buttons = this.shadowRoot.querySelectorAll('.toolbar-button');
         this.addEventListeners();
     }
 
-    getStyles() {
-        return `
-            .toolbar {
-                display: flex;
-                align-items: center;
-                gap: 10px;
-                background-color: var(--toolbar-bg, #f4f4f4);
-                padding: 10px;
-                border-radius: 5px;
-                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            }
-
-            .toolbar-button {
-                padding: 8px 16px;
-                background-color: var(--btn-bg, #007BFF);
-                color: var(--btn-color, #FFF);
-                border: none;
-                border-radius: 5px;
-                cursor: pointer;
-            }
-
-            .toolbar-button:hover {
-                background-color: var(--btn-bg-hover, #0056b3);
-            }
-        `;
-    }
-
     addEventListeners() {
-        this.buttons.forEach(button => {
-            button.addEventListener('click', (e) => {
-                this.dispatchEvent(new CustomEvent('toolbar-action', {
-                    detail: { action: e.target.dataset.action },
-                    bubbles: true,
-                    composed: true
-                }));
+        this.shadowRoot.addEventListener('slotchange', () => {
+            this.buttons = this.shadowRoot.querySelectorAll('.toolbar-button');
+            this.buttons.forEach(button => {
+                button.addEventListener('click', (e) => {
+                    this.dispatchEvent(new CustomEvent('toolbar-action', {
+                        detail: { action: e.target.dataset.action },
+                        bubbles: true,
+                        composed: true
+                    }));
+                });
             });
         });
     }
 }
 
+// Define the custom element
 customElements.define('nui-toolbar', NUIToolbar);
