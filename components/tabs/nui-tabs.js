@@ -7,7 +7,7 @@ class NUITabs extends HTMLElement {
     connectedCallback() {
         // Load external CSS
         this.shadowRoot.innerHTML = `
-            <link rel="stylesheet" href="path/to/nui-tabs.css">
+            <link rel="stylesheet" href="/components/tabs/nui-tabs.css">
             <div class="tabs">
                 <slot name="tab-buttons"></slot>
             </div>
