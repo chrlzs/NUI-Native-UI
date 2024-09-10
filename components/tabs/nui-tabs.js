@@ -3,48 +3,13 @@ class NUITabs extends HTMLElement {
         super();
         const shadow = this.attachShadow({ mode: 'open' });
 
+        // Create the external stylesheet link
+        const linkElement = document.createElement('link');
+        linkElement.setAttribute('rel', 'stylesheet');
+        linkElement.setAttribute('href', './nui-tabs.css');  // Link to the external CSS file
+
+        // Create the slot structure for the component
         shadow.innerHTML = `
-            <style>
-                /* Default styling for tabs */
-                :host {
-                    display: block;
-                    font-family: var(--font-family, Arial, sans-serif);
-                }
-
-                .tabs {
-                    display: flex;
-                    border-bottom: 2px solid var(--tab-border-color, #ccc);
-                }
-
-                .tab-button {
-                    padding: 10px 20px;
-                    cursor: pointer;
-                    background-color: var(--tab-bg-color, #f9f9f9);
-                    border: none;
-                    outline: none;
-                    transition: background-color 0.3s ease;
-                }
-
-                .tab-button.active {
-                    background-color: var(--tab-active-bg-color, #fff);
-                    border-bottom: 2px solid var(--tab-active-border-color, #007BFF);
-                }
-
-                .tab-button:hover:not(.active) {
-                    background-color: var(--tab-hover-bg-color, #eee);
-                }
-
-                .tab-content {
-                    display: none;
-                    padding: 20px;
-                    border: 1px solid var(--content-border-color, #ddd);
-                    border-top: none;
-                }
-
-                .tab-content.active {
-                    display: block;
-                }
-            </style>
             <div class="tabs">
                 <slot name="tab-buttons"></slot>
             </div>
@@ -53,22 +18,29 @@ class NUITabs extends HTMLElement {
             </div>
         `;
 
+        // Append the stylesheet to the shadow DOM
+        shadow.appendChild(linkElement);
+
+        this.tabButtons = [];
+        this.tabContents = [];
+    }
+
+    connectedCallback() {
         this.tabButtons = this.querySelectorAll('[data-tab]');
         this.tabContents = this.querySelectorAll('.tab-content');
 
-        console.log(`Found ${this.tabButtons.length} tab buttons.`); // Debug log
-        console.log(`Found ${this.tabContents.length} tab contents.`); // Debug log
+        console.log(`Found ${this.tabButtons.length} tab buttons.`);
+        console.log(`Found ${this.tabContents.length} tab contents.`);
 
         this.addEventListeners();
 
-        // Activate the first tab and content on load
         if (this.tabButtons.length > 0) {
             this.activateTab(this.tabButtons[0].dataset.tab);
         }
     }
 
     addEventListeners() {
-        console.log("addEventListeners called"); // Debug log
+        console.log("addEventListeners called");
 
         if (this.tabButtons.length === 0) {
             console.warn("No tab buttons found to attach event listeners.");
@@ -77,7 +49,7 @@ class NUITabs extends HTMLElement {
 
         this.tabButtons.forEach(button => {
             button.addEventListener('click', () => {
-                console.log(`Tab ${button.dataset.tab} clicked`); // Log the click event
+                console.log(`Tab ${button.dataset.tab} clicked`);
                 this.activateTab(button.dataset.tab);
             });
         });
