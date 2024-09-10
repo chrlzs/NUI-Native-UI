@@ -1,15 +1,13 @@
 class NUITabs extends HTMLElement {
     constructor() {
         super();
-        const shadow = this.attachShadow({ mode: 'open' });
+        this.attachShadow({ mode: 'open' });
+    }
 
-        // Create the external stylesheet link
-        const linkElement = document.createElement('link');
-        linkElement.setAttribute('rel', 'stylesheet');
-        linkElement.setAttribute('href', './nui-tabs.css');  // Link to the external CSS file
-
-        // Create the slot structure for the component
-        shadow.innerHTML = `
+    connectedCallback() {
+        // Load external CSS
+        this.shadowRoot.innerHTML = `
+            <link rel="stylesheet" href="path/to/nui-tabs.css">
             <div class="tabs">
                 <slot name="tab-buttons"></slot>
             </div>
@@ -18,38 +16,28 @@ class NUITabs extends HTMLElement {
             </div>
         `;
 
-        // Append the stylesheet to the shadow DOM
-        shadow.appendChild(linkElement);
-
-        this.tabButtons = [];
-        this.tabContents = [];
+        // Add event listeners to slot content after the slots are populated
+        this.shadowRoot.querySelector('slot[name="tab-buttons"]').addEventListener('slotchange', () => this.initializeTabs());
     }
 
-    connectedCallback() {
+    initializeTabs() {
+        // Get tab buttons and contents from the light DOM (outside shadow DOM)
         this.tabButtons = this.querySelectorAll('[data-tab]');
         this.tabContents = this.querySelectorAll('.tab-content');
 
-        console.log(`Found ${this.tabButtons.length} tab buttons.`);
-        console.log(`Found ${this.tabContents.length} tab contents.`);
-
-        this.addEventListeners();
-
         if (this.tabButtons.length > 0) {
-            this.activateTab(this.tabButtons[0].dataset.tab);
+            // Attach event listeners and activate the first tab
+            this.addEventListeners();
+            this.activateTab(this.tabButtons[0].dataset.tab);  // Activate first tab by default
+        } else {
+            console.warn("No tab buttons found.");
         }
     }
 
     addEventListeners() {
-        console.log("addEventListeners called");
-
-        if (this.tabButtons.length === 0) {
-            console.warn("No tab buttons found to attach event listeners.");
-            return;
-        }
-
         this.tabButtons.forEach(button => {
             button.addEventListener('click', () => {
-                console.log(`Tab ${button.dataset.tab} clicked`);
+                console.log(`Tab ${button.dataset.tab} clicked`);  // Debug log
                 this.activateTab(button.dataset.tab);
             });
         });
@@ -58,15 +46,15 @@ class NUITabs extends HTMLElement {
     activateTab(tabId) {
         console.log(`Activating tab: ${tabId}`);
 
+        // Toggle active class on tab buttons
         this.tabButtons.forEach(button => {
             const isActive = button.dataset.tab === tabId;
-            console.log(`Setting button ${button.dataset.tab} active: ${isActive}`);
             button.classList.toggle('active', isActive);
         });
 
+        // Toggle active class on tab content
         this.tabContents.forEach(content => {
             const isActive = content.id === tabId;
-            console.log(`Setting content ${content.id} active: ${isActive}`);
             content.classList.toggle('active', isActive);
         });
     }
