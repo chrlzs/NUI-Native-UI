@@ -1,35 +1,87 @@
 .nui-dropdown {
     position: relative;
     display: inline-block;
+    font-family: var(--font-family, Arial, sans-serif);
 }
 
 .nui-dropdown-button {
-    padding: 10px 15px;
-    background-color: #f0f0f0;
-    border: 1px solid #ccc;
+    padding: 12px 20px;
+    background-color: var(--button-bg, #007BFF);
+    border: 1px solid var(--button-border-color, #0056b3);
+    border-radius: var(--button-border-radius, 4px);
+    color: var(--button-text-color, #ffffff);
     cursor: pointer;
+    font-size: var(--button-font-size, 16px); /* Increased font size for readability */
+    line-height: 1.5;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.nui-dropdown-button:hover {
+    background-color: var(--button-hover-bg, #0056b3);
+    border-color: var(--button-hover-border-color, #004494);
+}
+
+.nui-dropdown-button:focus {
+    outline: 3px solid var(--button-focus-outline, #1e90ff); /* Clear focus outline for accessibility */
+    outline-offset: 2px;
+    box-shadow: 0 0 0 3px var(--button-focus-shadow-color, rgba(30, 144, 255, 0.4));
 }
 
 .nui-dropdown-content {
     display: none;
     position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    left: 0;
+    right: 0;
+    background-color: var(--dropdown-bg, #ffffff);
+    border: 1px solid var(--dropdown-border-color, #ddd);
+    border-radius: var(--dropdown-border-radius, 4px);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.15);
     z-index: 1;
+    font-size: var(--dropdown-font-size, 16px); /* Increased for readability */
+    line-height: 1.6; /* Improved readability for content */
 }
 
 .nui-dropdown-content a {
-    color: black;
+    color: var(--dropdown-link-color, #333);
     padding: 12px 16px;
     text-decoration: none;
     display: block;
+    background-color: var(--dropdown-link-bg, #ffffff);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-weight: 500;
+    outline: none; /* Removes default outline, focus styles will handle accessibility */
 }
 
 .nui-dropdown-content a:hover {
-    background-color: #f1f1f1;
+    background-color: var(--dropdown-link-hover-bg, #e9ecef);
+    color: var(--dropdown-link-hover-color, #212529); /* Ensure high contrast on hover */
+}
+
+.nui-dropdown-content a:focus {
+    background-color: var(--dropdown-link-focus-bg, #dfe4ea); /* Ensure focus state is clear */
+    color: var(--dropdown-link-focus-color, #212529);
+    outline: 3px solid var(--dropdown-link-focus-outline, #1e90ff); /* Clear focus outline */
+    outline-offset: 2px;
 }
 
 .show {
     display: block;
 }
+
+/* Ensuring contrast ratios and hover colors comply with WCAG AA */
+:root {
+    --button-bg: #007BFF;
+    --button-text-color: #ffffff;
+    --button-border-color: #0056b3;
+    --button-hover-bg: #0056b3;
+    --button-hover-border-color: #004494;
+    --button-focus-outline: #1e90ff;
+    --button-focus-shadow-color: rgba(30, 144, 255, 0.4);
+
+    --dropdown-bg: #ffffff;
+    --dropdown-border-color: #ccc;
+    --dropdown-link-color: #212529; /* Darker text for higher contrast */
+    --dropdown-link-hover-bg: #e9ecef; /* Lighter hover background */
+    --dropdown-link-hover-color: #212529;
+    --dropdown-link-focus-bg: #dfe4ea;
+    --dropdown-link-focus-color: #212

@@ -34,5 +34,13 @@
     --navbar-text-color: #fff;
     --navbar-link-color: #fff;
     --navbar-toggle-color: #fff;
-    
+    /* Dropdown Variables */
+    --dropdown-bg: #ffffff;
+    --dropdown-border-color: #ccc;
+    --dropdown-link-color: #212529; /* Darker text for higher contrast */
+    --dropdown-link-hover-bg: #e9ecef; /* Lighter hover background */
+    --dropdown-link-hover-color: #212529;
+    --dropdown-link-focus-bg: #dfe4ea;
+    --dropdown-link-focus-color: #212529;
+    --dropdown-link-focus-outline: #1e90ff;
 }

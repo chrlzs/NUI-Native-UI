@@ -1,35 +1,44 @@
 class NUIDropdown extends HTMLElement {
     constructor() {
         super();
-        // Close the dropdown if the user clicks outside of it
+        this.attachShadow({ mode: 'open' });
+    }
+
+    connectedCallback() {
+        // Load external CSS for dropdown
+        this.shadowRoot.innerHTML = `
+            <link rel="stylesheet" href="/components/dropdown/nui-dropdown.css">
+            <div class="nui-dropdown">
+                <button class="nui-dropdown-button" aria-haspopup="true" aria-expanded="false">
+                    <slot name="dropdown-button">Dropdown</slot>
+                </button>
+                <div class="nui-dropdown-content">
+                    <slot name="dropdown-content"></slot>
+                </div>
+            </div>
+        `;
+
+        this.dropdownButton = this.shadowRoot.querySelector('.nui-dropdown-button');
+        this.dropdownContent = this.shadowRoot.querySelector('.nui-dropdown-content');
+
+        this.addEventListeners();
+    }
+
+    addEventListeners() {
+        // Toggle dropdown content on button click
+        this.dropdownButton.addEventListener('click', () => {
+            const isExpanded = this.dropdownContent.classList.toggle('show');
+            this.dropdownButton.setAttribute('aria-expanded', isExpanded);
+        });
+
+        // Close the dropdown if clicked outside
         document.addEventListener('click', (event) => {
-            if (!this.contains(event.target) && this.dropdownContent.classList.contains('show')) {
+            if (!this.contains(event.target)) {
                 this.dropdownContent.classList.remove('show');
+                this.dropdownButton.setAttribute('aria-expanded', 'false');
             }
         });
     }
 }
 
 customElements.define('nui-dropdown', NUIDropdown);
-
-document.addEventListener('DOMContentLoaded', function() {
-    const dropdowns = document.querySelectorAll('.nui-dropdown');
-
-    dropdowns.forEach(dropdown => {
-        const button = dropdown.querySelector('.nui-dropdown-button');
-        const content = dropdown.querySelector('.nui-dropdown-content');
-
-        button.addEventListener('click', function() {
-            content.classList.toggle('show');
-            button.setAttribute('aria-expanded', content.classList.contains('show'));
-        });
-
-        // Close the dropdown if clicked outside
-        document.addEventListener('click', function(event) {
-            if (!dropdown.contains(event.target)) {
-                content.classList.remove('show');
-                button.setAttribute('aria-expanded', 'false');
-            }
-        });
-    });
-});
