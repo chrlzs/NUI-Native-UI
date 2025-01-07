@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="/style-guide.css">
     <link rel="stylesheet" href="/components/modal/nui-modal.css">
     <link rel="stylesheet" href="/components/button/nui-button.css">
+    <link rel="stylesheet" href="/components/textarea/nui-textarea.css">
     <link rel="stylesheet" href="/components/tooltip/nui-tooltip.css">
     <link rel="stylesheet" href="/components/carousel/nui-carousel.css">
     <link rel="stylesheet" href="/components/accordion/nui-accordion.css">
@@ -53,6 +54,14 @@
 
         </section>
 
+        <!-- Text Area Component -->
+        <section id="textarea">
+            <h2>Textarea</h2>
+            <p>A simple text area.</p>
+            <!-- nui-textarea Component -->
+            <nui-textarea placeholder="Enter your message"></nui-textarea>
+        </section>
+
         <!-- Tooltip Component -->
         <section id="tooltips">
             <h2>Tooltips</h2>
@@ -93,22 +102,22 @@
             </nui-accordion>
         </section>
 
-<!-- Carousel Component -->
-<section id="carousel">
-    <h2>Carousel/Slider</h2>
-    <p>A responsive image carousel/slider component.</p>
-    <nui-carousel>
-        <div class="carousel-item active">
-            <img src="https://placehold.co/600x400/000000/FFF" alt="Slide 1">
-        </div>
-        <div class="carousel-item">
-            <img src="https://placehold.co/600x400/DDDDDD/FFF" alt="Slide 2">
-        </div>
-        <div class="carousel-item">
-            <img src="https://placehold.co/600x400/666666/FFF" alt="Slide 3">
-        </div>
-    </nui-carousel>
-</section>
+        <!-- Carousel Component -->
+        <section id="carousel">
+            <h2>Carousel/Slider</h2>
+            <p>A responsive image carousel/slider component.</p>
+            <nui-carousel>
+                <div class="carousel-item active">
+                    <img src="https://placehold.co/600x400/000000/FFF" alt="Slide 1">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://placehold.co/600x400/DDDDDD/FFF" alt="Slide 2">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://placehold.co/600x400/666666/FFF" alt="Slide 3">
+                </div>
+            </nui-carousel>
+        </section>
 
 
         <!-- Alert Component -->
@@ -118,34 +127,34 @@
             <nui-button onclick="showAlert('This is an alert message!', 'success')">Show Alert</nui-button>
         </section>
 
-<!-- Progress Bar Component -->
-<section id="progress-bars">
-    <h2>Progress Bars</h2>
-    <p>A standard progress bar that can be updated programmatically.</p>
-    <nui-progress-bar id="progressBar" progress="0"></nui-progress-bar>
-    <nui-button onclick="updateProgressBar(70)">Set Progress to 70%</nui-button>
-</section>
+        <!-- Progress Bar Component -->
+        <section id="progress-bars">
+            <h2>Progress Bars</h2>
+            <p>A standard progress bar that can be updated programmatically.</p>
+            <nui-progress-bar id="progressBar" progress="0"></nui-progress-bar>
+            <nui-button onclick="updateProgressBar(70)">Set Progress to 70%</nui-button>
+        </section>
 
-<!-- Breadcrumbs Component -->
-<section id="breadcrumbs">
-    <h2>Breadcrumbs</h2>
-    <p>A modern set of navigation breadcrumbs with enhanced styling.</p>
-    <nui-breadcrumbs>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Products</a></li>
-            <li><a href="#">Electronics</a></li>
-            <li class="active"><a href="#">Smartphones</a></li>
-        </ul>
-    </nui-breadcrumbs>
-</section>
+        <!-- Breadcrumbs Component -->
+        <section id="breadcrumbs">
+            <h2>Breadcrumbs</h2>
+            <p>A modern set of navigation breadcrumbs with enhanced styling.</p>
+            <nui-breadcrumbs>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#">Electronics</a></li>
+                    <li class="active"><a href="#">Smartphones</a></li>
+                </ul>
+            </nui-breadcrumbs>
+        </section>
 
-<!-- Spinner Component -->
-<section id="spinner">
-    <h2>Spinner/Loader</h2>
-    <p>A customizable spinner/loader component.</p>
-    <nui-spinner></nui-spinner>
-</section>
+        <!-- Spinner Component -->
+        <section id="spinner">
+            <h2>Spinner/Loader</h2>
+            <p>A customizable spinner/loader component.</p>
+            <nui-spinner></nui-spinner>
+        </section>
 
         <!-- Pagination Content -->
         <section id="pagination">
@@ -165,52 +174,53 @@
             </nui-toolbar>
         </section>
 
-<!-- Tabs Content -->
-<section id="tabs">
-    <h2>Tabs</h2>
-    <p>A tabbed interface to organize content.</p>
-    <nui-tabs>
-        <div slot="tab-buttons" data-tab="tab1" class="tab-button">Tab 1</div>
-        <div slot="tab-buttons" data-tab="tab2" class="tab-button">Tab 2</div>
-        <div slot="tab-buttons" data-tab="tab3" class="tab-button">Tab 3</div>
+        <!-- Tabs Content -->
+        <section id="tabs">
+            <h2>Tabs</h2>
+            <p>A tabbed interface to organize content.</p>
+            <nui-tabs>
+                <div slot="tab-buttons" data-tab="tab1" class="tab-button">Tab 1</div>
+                <div slot="tab-buttons" data-tab="tab2" class="tab-button">Tab 2</div>
+                <div slot="tab-buttons" data-tab="tab3" class="tab-button">Tab 3</div>
 
-        <div slot="tab-contents" id="tab1" class="tab-content">Content 1</div>
-        <div slot="tab-contents" id="tab2" class="tab-content">Content 2</div>
-        <div slot="tab-contents" id="tab3" class="tab-content">Content 3</div>
-    </nui-tabs>
-</section>
+                <div slot="tab-contents" id="tab1" class="tab-content">Content 1</div>
+                <div slot="tab-contents" id="tab2" class="tab-content">Content 2</div>
+                <div slot="tab-contents" id="tab3" class="tab-content">Content 3</div>
+            </nui-tabs>
+        </section>
 
-<!-- Dropdown Content -->
-<section id="dropdown">
-    <h2>Dropdown Menus</h2>
-    <p>Dropdown menu component with customizable options.</p>
-    <nui-dropdown>
-        <div slot="dropdown-button">Dropdown</div>
-        <div slot="dropdown-content">
-            <a href="#">Option 1</a>
-            <a href="#">Option 2</a>
-            <a href="#">Option 3</a>
-        </div>
-    </nui-dropdown>
-</section>
+        <!-- Dropdown Content -->
+        <section id="dropdown">
+            <h2>Dropdown Menus</h2>
+            <p>Dropdown menu component with customizable options.</p>
+            <nui-dropdown>
+                <div slot="dropdown-button">Dropdown</div>
+                <div slot="dropdown-content">
+                    <a href="#">Option 1</a>
+                    <a href="#">Option 2</a>
+                    <a href="#">Option 3</a>
+                </div>
+            </nui-dropdown>
+        </section>
 
-<!-- Card Content -->
-<section>
-    <h2>Card</h2>
-    <nui-card>
-        <div slot="header">Card Title</div>
-        <div slot="body">
-            This is the body of the card.
-        </div>
-        <div slot="footer">Footer Content</div>
-    </nui-card>
-</section>
+        <!-- Card Content -->
+        <section>
+            <h2>Card</h2>
+            <nui-card>
+                <div slot="header">Card Title</div>
+                <div slot="body">
+                    This is the body of the card.
+                </div>
+                <div slot="footer">Footer Content</div>
+            </nui-card>
+        </section>
 
 
     </main>
 
     <script src="/components/button/nui-button.js" type="module"></script>
     <script src="/components/modal/nui-modal.js" type="module"></script>
+    <script src="/components/textarea/nui-textarea.js" type="module"></script>
     <script src="/components/tooltip/nui-tooltip.js" type="module"></script>
     <script src="/components/accordion/nui-accordion.js"></script>
     <script src="/components/carousel/nui-carousel.js" type="module"></script>
